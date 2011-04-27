@@ -52,3 +52,7 @@ Also import a few default values provided in `CREDVAT/PostGIS_DB/defaultValues.s
 psql -d cresisdb -f defaultValues.sql
 }}}
 At this stage the database is setup and we can start importing datasets.
+
+== Web client: Building and deploying ==
+
+The GWT web client used to access the CRESIS datastore can be found in `CREDVAT/AJAX_APP`. It requires Google Web Toolkit v1.6.
