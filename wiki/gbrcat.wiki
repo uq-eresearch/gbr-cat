@@ -1,0 +1,70 @@
+#summary gbr-cat overview and installation
+
+= GBR-CAT =
+
+The Great Barrier Reef Climate Analysis Tool aims to provide a generic means to expose coral reef related research collections stored at UQ. It main features are:
+ * allow researchers to register their collection by providing descriptive metadata describing their collection;
+ * metadata schema conforming to ANDS [http://ands.org.au/guides/rif-cs-awareness.html RIF-CS] format;
+ * allow search and browse functionality to find stored collections;
+ * browse collection based on a map and timeline;
+ * upload data to the cresis database
+ * provide RSS and OAI-PMH (RIF-CS) services to allow metadata harvesting
+
+= Technical details=
+This section provides an overview of the architecture and dependencies of the project.
+
+== Build Framework ==
+ * Maven build
+ * JUnit unit tests
+ * Log4J logging
+
+== Backend == 
+ * Hibernate ORM -- Pojo generated from SQL Schema
+ * RESTlet
+ * PostGres / PostGIS
+ * OAI / PMH service provided by OAICat.
+ * RSS Feed provided by ROME.
+ * RIF-CS metadata support provided by Australian National Data Service
+
+== Frontend ==
+ * Fremarker templating
+ * Mapping by Google Maps API v3
+ * Timeline by Simile Widgets Timeline
+
+== Deployment ==
+ * Packaged by Maven as WAR
+ * Deployment tested with Tomcat 6
+
+= Installing & Configuring = 
+It is assumed that you have a PostgreSQL/PostGIS database setup. A good reference achieving this on Linux (Ubuntu) is [http://www.paolocorti.net/2008/01/30/installing-postgis-on-ubuntu/ Installing PostGIS on Ubuntu]
+
+The following setup steps are required:
+ * Install the [http://services.ands.org.au/documentation/rifcs/java-api-draft/rifcs-api.jar RIF-CS Java API] provided by ANDS. This will need to be manually installed into your maven repository: Install by running the following maven command:
+{{{
+mvn install:install-file -DgroupId=au.org.ands -DartifactId=rifcs -Dversion=1.0 -Dpackaging=jar -Dfile=/path/to/rifcs-api.jar
+}}}
+ * Customise `gbrcat/src/resource/collections-registry.properties` and `gbrcat/src/resource/oaicat.properties` to select constants included in RSS feed and OAI-PMH results.
+ * Edit gbrcat/src/resource/hibernate.cfg.xml to specify database connection options, an example of the main properties provided below:
+{{{
+<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+<property name="hibernate.connection.password">s3cr3t</property>
+<property name="hibernate.connection.url">jdbc:postgresql://localhost/gisdb</property>
+<property name="hibernate.connection.username">gis</property>
+<property name="hibernate.default_schema">public</property>
+}}}
+ * Build the project by running the following command:
+{{{
+mvn package
+}}}
+ * This will create the WAR file gbrcat/target/gbrcat.war
+ * Deploy the WAR to Tomcat (or some other Servlet container) and test:
+    * Web interface: http://deploy.net/gbrcat
+    * RSS: http://deploy.net/gbrcat/CollectionsRegistryFeed
+    * OAI-PMH: http://deploy.net/gbrcat/OAIHandler
+    * Direct RIF-CS: http://deploya.net/gbrcat/GetRegistryObjects
+
+As an alternative you can run the application via Maven and Jetty using the command:
+{{{
+mvn jetty:run
+}}}
+Check the jetty settings in `gbrcat/pom.xml` to configure ports etc.
