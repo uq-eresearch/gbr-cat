@@ -1,0 +1,54 @@
+#summary CRESIS overview and installation
+
+= CRESIS =
+
+CRESIS (Coral Reef Eco-Informatics System) is a system for querying and recording coral reef survey observations. It was previously entitle CREDVAT (Coral Reef EcoInformtics Data Visualisation and Analysis Tool) and in some cases may be called REIfS. It is comprised of the following major components:
+
+ * *Ontology* : OWL ontology developed as part of [https://espace.library.uq.edu.au/view/UQ:218905 Campbell Allen's masters thesis]. Captures concepts such as Observations, Actors, Sites, Ecological Processes, Measurements, etc.
+ * *Datastore* : Initially this was a RDF triplestore containing coral reef observation. A number of different triplestore were evaluated for performace / features (see Campbell Allen's thesis). Later the triplestore was changed to Postgres/PostGIS as the triplestore was not effective in dealing with the large amounts of spatially related data. Scripts and tools are provided to create the database based on the OWL ontology.
+ * *Web client* : A web-based client for querying, visualising and analysing collections in the datastore was developed. This was written in Google Web Toolkit (GWT) and make use of AJAX to communicate with the datastore. Initially the client was developed to use the RDF triplestore, later is was ported and generalised to use the PostgresSQL / PostGIS backend.
+
+= Directory Structure =
+CRESIS is contained in the CREDVAT directory in the download (CREDVAT is a legacy name for the project).
+
+The directory contains
+{{{
+CREDVAT
+|
++-AJAX_APP: The GWT application used to access CRESIS store (either triplestore or PostgresSQL)
+|
++-harvester: Java project for providing OAI-PMH & RSS access collections in Postgres
+|
++-Ontology: OWL ontologies, REIfS.owl is the main ontology
+|
++-PostGIS_DB: SQL scripts of populating the PostgresSQL database
+|
++-reifs2sql: Java project for reading OWL ontology and generating SQL
+}}}
+
+
+= Installation and configuration =
+
+Installing and configuring CRESIS currently involves a number of manual steps. Warning: inserting large data collections into the database can take considerable time.
+
+== PostgreSQL: Creating/populating the database ==
+
+Assuming you have already done the following:
+ * installed and configured PostgreSQL / PostGIS
+ * create database with specific user - we will refer to these as cresisdb and cresisuser
+ * added PostGIS support to the database cresisdb - good tutorial for doing this: [http://www.paolocorti.net/2008/01/30/installing-postgis-on-ubuntu/ Installing PostGIS on Ubuntu]
+
+Create the database schema by running the SQL DDL provided in `CREDVAT/PostGIS_DB/postGIS.sql`, e.g. in linux/unix run:
+{{{
+psql -d cresisdb -f postGIS.sql
+}}}
+
+Next the instance data recorded in the OWL ontology needs to be imported. The `CREDVAT/PostGIS_DB/REIfS.sql` file contains this data. `REIfS.sql` is originally generated using the `CREDVAT/reifs2sql` Java project. If the ontology changes `REIfS.sql` will need to be regenerated using `reifs2sql`. Details for doing this can be found in `CREDVAT/reifs2sql/README.txt`. Note: You only need to use reifs2sql if there are ontology changes, otherwise simply use the provided `CREDVAT/PostGIS_DB/REIfS.sql`. Import the values in `REIfS.sql` into Postgres, e.g. in *nix:
+{{{
+psql -d cresisdb -f REIfS.sql
+}}}
+Also import a few default values provided in `CREDVAT/PostGIS_DB/defaultValues.sql`:
+{{{
+psql -d cresisdb -f defaultValues.sql
+}}}
+At this stage the database is setup and we can start importing datasets.
