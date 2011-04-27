@@ -1,0 +1,8 @@
+#summary GBR-CAT functional components
+
+= GBR-CAT Functional Components =
+
+The Health-e-Reef is divided into two separate components / sub-projects:
+
+ * [CRESIS] : System for querying and recording coral reef survey observations. Comprises a datastore (PostgreSQL) storing coral observation and Google Web Toolkit client to search and browse results.
+ * [gbrcat]: Provide a generic means for researchers at UQ to be able to register there data collection in a metadata repository. The repository can be searched by keyword, browsed via timeline and map interface and harvested by external parties (e.g. ANDS) via a OAI-PMH or RSS service. Provides an interface for adding data to the Cresis database.
