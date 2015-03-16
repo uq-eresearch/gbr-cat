@@ -1,0 +1,29 @@
+<?xml version='1.0'?>
+<characteristic>
+    <folder id='base' title="Base" qtip="All instances of Base Characteristics">
+		<leaf id='Rain Fall' title="Rain Fall" qtip="All instances of Rain Fall"/>
+		<leaf id='Wind Direction' title="Wind Direction" qtip="All instances of Wind Direction"/>
+		<leaf id='Count' title="Count" qtip="All instances of Count"/>
+    	<leaf id='Growth' title="Growth" qtip="All instances of Growth"/>
+    	<leaf id='Hue' title="Hue" qtip="All instances of Hue"/>
+		<leaf id='Tide' title="Tide" qtip="All instances of Tide"/>
+		<leaf id='Weight' title="Weight" qtip="All instances of Weight"/>
+		<leaf id='Air Temperature' title="Air Temperature" qtip="All instances of Air Temperature"/>
+		<leaf id='Chlor a' title="Sea Water Chlor_a concentration" qtip="All instances of Chlor_a concetrations"/>
+		<leaf id='Sea Water Temperature' title="Sea Water Temperature" qtip="All instances of Sea Water Temperature"/>
+		<leaf id='Sea Surface Temperature' title="Sea Surface Temperature" qtip="All instances of Sea Surface Temperature"/>
+    </folder>
+    <folder id='derived' title="Derived" qtip="All instances of Derived Characteristics">
+		<leaf id='Area' title="Area" qtip="All instances of Area"/>
+		<leaf id='Volume' title="Volume" qtip="All instances of Volume"/>
+	</folder>
+	<folder id='complex_derived' title="Complex Derived" qtip="All instances of Complex Derived Characteristics">
+		<leaf id='Bleaching Level' title="Bleaching Level" qtip="All instances of Bleaching Level"/>
+		<leaf id='Intensity' title="Intensity" qtip="All instances of Coral Colour Intensity"/>
+		<leaf id='Humidity' title="Humidity" qtip="All instances of Humidity"/>
+		<leaf id='Par' title="Photosynthetically Available Radiation" qtip="All instances of PAR"/>
+		<leaf id='Air Visibility' title="Air Visibility" qtip="All instances of Air Visibility"/>
+		<leaf id='Air Pressure' title="Air Pressure" qtip="All instances of Air Pressure"/>
+		<leaf id='Wind Speed' title="Wind Speed" qtip="All instances of Wind Speed"/>
+	</folder>
+</characteristic>

@@ -1,0 +1,24 @@
+<?xml version='1.0'?>
+<actors>
+	<leaf id='Guillermo Diaz' title="Guillermo Diaz" qtip="Guillermo Diaz"/>
+	<leaf id='Juan Carlos Ortiz' title="Juan Carlos Ortiz" qtip="Juan Carlos Ortiz"/>
+	<leaf id='Scarla Weeks' title="Scarla Weeks" qtip="Scarla Weeks"/>
+	<leaf id='Ray Berkelmans' title="Ray Berkelmans" qtip="Ray Berkelmans"/>
+        <leaf id='Linda Tonk' title="Linda Tonk" qtip="Linda Tonk"/>
+	<leaf id='Hirs Staff' title="HIRS Staff" qtip="HIRS Staff"/>
+	<leaf id='Seadas' title="SeaDAS Software" qtip="SeaDAS Software"/>
+	<leaf id='CMS Bleaching Survey Team' title="CMS Bleaching Survey Team" qtip="CMS Bleaching Survey Team"/>
+	<leaf id='BOM Weather Station' title="BOM Weather Station" qtip="BOM Weather Station"/>	
+	<leaf id='Thermometer' title="Normal Thermometer" qtip="Thermometer"/>
+	<leaf id='Tide Gauge HIRS' title="Tide Gauge HIRS" qtip="HIRS Tide Gauge"/>
+	<leaf id='Rain Gauge HIRS' title="Rain Gauge HIRS" qtip="HIRS Rain Gauge"/>
+	<leaf id='Mercury Thermometer HIRS' title="Mercury Thermometer HIRS" qtip="Mercury Thermometer HIRS"/>
+	<leaf id='Barometer HIRS' title="Barometer HIRS" qtip="Barometer HIRS"/>
+	<leaf id='Wet Dry Bulb HIRS' title="Wet Dry Bulb HIRS" qtip="Wet Dry Bulb HIRS"/>
+	<leaf id='Anemometer HIRS' title="Anemometer HIRS" qtip="Anemometer HIRS"/>
+	<leaf id='Odyssey Temperature Logger AIMS' title="AIMS Odyssey Temperature Logger" qtip="Odyssey Temperature Logger"/>
+	<leaf id='MODIS' title="MODIS Satellite Remote Sensor" qtip="MODIS Satellite Remote Sensor"/>
+	<leaf id='Halftide Rock RWS AIMS' title="Halftide Rocks RWS AIMS" qtip="AIMS Halftide Rocks Remote Weather Station"/>
+	<leaf id='Cape Bowling Green RWS AIMS' title="Cape Bowling Green RWS AIMS" qtip="AIMS Cape Bowling Green Remote Weather Station"/>
+	<leaf id='Hardy Reef RWS AIMS' title="Hardy Reef RWS AIMS" qtip="AIMS Hardy Reef Remote Weather Station"/>
+</actors>

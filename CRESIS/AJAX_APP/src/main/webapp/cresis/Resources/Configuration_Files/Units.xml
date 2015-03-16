@@ -1,0 +1,27 @@
+<?xml version='1.0'?>
+<characteristic>
+    <folder id='base' title="Base" qtip="All instances of Base Characteristics">
+		<leaf id='rain_fall' title="Rain Fall" qtip="All instances of Rain Fall"/>
+		<leaf id='wind_direction' title="Wind Direction" qtip="All instances of Wind Direction"/>
+		<leaf id='count' title="Count" qtip="All instances of Count"/>
+    	<leaf id='growth' title="Growth" qtip="All instances of Growth"/>
+    	<leaf id='hue' title="Hue" qtip="All instances of Hue"/>
+		<leaf id='tide' title="Tide" qtip="All instances of Tide"/>
+		<leaf id='weight' title="Weight" qtip="All instances of Weight"/>
+		<leaf id='air_temperature' title="Air Temperature" qtip="All instances of Air Temperature"/>
+		<leaf id='sea_water_temperature' title="Sea Water Temperature" qtip="All instances of Sea Water Temperature"/>
+    </folder>
+    <folder id='derived' title="Derived" qtip="All instances of Derived Characteristics">
+		<leaf id='area' title="Area" qtip="All instances of Area"/>
+		<leaf id='volume' title="Volume" qtip="All instances of Volume"/>
+	</folder>
+	<folder id='complex_derived' title="Complex Derived" qtip="All instances of Complex Derived Characteristics">
+		<leaf id='bleaching_level' title="Bleaching Level" qtip="All instances of Bleaching Level"/>
+		<leaf id='intensity' title="Intensity" qtip="All instances of Coral Colour Intensity"/>
+		<leaf id='humidity' title="Humidity" qtip="All instances of Humidity"/>
+		<leaf id='par' title="Par" qtip="All instances of Par"/>
+		<leaf id='air_visibility' title="Air Visibility" qtip="All instances of Air Visibility"/>
+		<leaf id='air_pressure' title="Air Pressure" qtip="All instances of Air Pressure"/>
+		<leaf id='wind_speed' title="Wind Speed" qtip="All instances of Wind Speed"/>
+	</folder>
+</characteristic>

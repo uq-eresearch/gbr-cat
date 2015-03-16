@@ -1,0 +1,12 @@
+<Realm className="au.edu.uq.eresearch.UQRealm" 
+
+	jndiURL="ldap://ldap.uq.edu.au:389"
+	userBase="ou=people,o=the university of queensland,c=au" 
+	userSubtree="true"
+	userSearch="(uid={0})" 
+	
+	driverName="org.postgresql.Driver"
+	jdbcURL="jdbc:postgresql://localhost/authority?user=dbuser&amp;password=dbpass"
+	userRoleTable="user_roles" 
+	userNameCol="user_name" 
+	roleNameCol="role_name" />

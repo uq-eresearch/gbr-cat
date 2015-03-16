@@ -1,0 +1,599 @@
+<?xml version='1.0'?>
+<queries>
+<query>
+	<north>null</north>
+	<south>null</south>
+	<east>null</east>
+	<west>null</west>
+	<lat>null</lat>
+	<lon>null</lon>
+	<start_date>null</start_date>
+	<end_date>null</end_date>
+	<target>null</target>
+	<characteristic>null</characteristic>
+	<location>null</location>
+	<actor>Guillermo Diaz</actor>
+	<measurement_value>null</measurement_value>
+	<unit>null</unit>
+	<research_program>null</research_program>
+	<ecological_process>null</ecological_process>
+	<process_output>null</process_output>
+	<genus>null</genus>
+	<species>null</species>
+	<morphology>null</morphology>
+	<depth>null</depth>
+	<sensor>null</sensor>
+	<description>All unique measurements by Guillermo Diaz</description>
+	<north1>null</north1>
+	<south1>null</south1>
+	<east1>null</east1>
+	<west1>null</west1>
+	<lat1>null</lat1>
+	<lon1>null</lon1>
+	<start_date1>null</start_date1>
+	<end_date1>null</end_date1>
+	<target1>null</target1>
+	<characteristic1>null</characteristic1>
+	<location1>null</location1>
+	<actor1>null</actor1>
+	<measurement_value1>null</measurement_value1>
+	<unit1>null</unit1>
+	<research_program1>null</research_program1>
+	<ecological_process1>null</ecological_process1>
+	<process_output1>null</process_output1>
+	<genus1>null</genus1>
+	<species1>null</species1>
+	<morphology1>null</morphology1>
+	<depth1>null</depth1>
+	<sensor1>null</sensor1>
+	<location_filter>null</location_filter>
+	<datetime_filter>null</datetime_filter>
+	<join_query>false</join_query>
+	<join_query_datetime>false</join_query_datetime>
+	<join_query_location>false</join_query_location>
+	<query_string>SELECT dt.startdate, dt.enddate, st.name as locname, COALESCE(ST_AsText(st.region_geometry), ST_AsText(point_geometry), '(none)') as location,
+tgt.description as target, ch.description as characteristic, un.description as unit,
+COALESCE(cast(msr.numeric_value as varchar), msr.other_value) as value, msr.precision,
+ac.name as actor, tl.name as tool, ql.qualifier 
+FROM 
+target tgt, observation obs, unit un, context ctx, site st, datetime dt, 
+observation_measurement obs_msr, characteristic ch, actor ac, observation_actor obs_ac,
+measurement msr LEFT JOIN tool tl on msr.tool = tl.id
+LEFT JOIN data_qualifier ql on msr.qualifier = ql.id 
+WHERE
+msr.id = obs_msr.measurementID and 
+obs_msr.observationid = obs.id and 
+obs.target = tgt.id and 
+msr.characteristic = ch.id and
+msr.unit = un.id and
+obs.id = obs_ac.observationid and
+obs_ac.actorid = ac.id and
+ac.name like 'Guillermo Diaz' and
+obs.context = ctx.id and
+ctx.site = st.id and
+ctx.datetime = dt.id;
+	</query_string>
+</query>
+<query>
+	<north>null</north>
+	<south>null</south>
+	<east>null</east>
+	<west>null</west>
+	<lat>null</lat>
+	<lon>null</lon>
+	<start_date>null</start_date>
+	<end_date>null</end_date>
+	<target>null</target>
+	<characteristic>null</characteristic>
+	<location>Heron Island</location>
+	<actor>null</actor>
+	<measurement_value>null</measurement_value>
+	<unit>null</unit>
+	<research_program>null</research_program>
+	<ecological_process>null</ecological_process>
+	<process_output>null</process_output>
+	<genus>null</genus>
+	<species>null</species>
+	<morphology>null</morphology>
+	<depth>null</depth>
+	<sensor>null</sensor>
+	<description>All unique measurements with location name Heron Island</description>
+	<north1>null</north1>
+	<south1>null</south1>
+	<east1>null</east1>
+	<west1>null</west1>
+	<lat1>null</lat1>
+	<lon1>null</lon1>
+	<start_date1>null</start_date1>
+	<end_date1>null</end_date1>
+	<target1>null</target1>
+	<characteristic1>null</characteristic1>
+	<location1>null</location1>
+	<actor1>null</actor1>
+	<measurement_value1>null</measurement_value1>
+	<unit1>null</unit1>
+	<research_program1>null</research_program1>
+	<ecological_process1>null</ecological_process1>
+	<process_output1>null</process_output1>
+	<genus1>null</genus1>
+	<species1>null</species1>
+	<morphology1>null</morphology1>
+	<depth1>null</depth1>
+	<sensor1>null</sensor1>
+	<location_filter>null</location_filter>
+	<datetime_filter>null</datetime_filter>
+	<join_query>false</join_query>
+	<join_query_datetime>false</join_query_datetime>
+	<join_query_location>false</join_query_location>
+	<query_string>SELECT dt.startdate, dt.enddate, st.name as locname, COALESCE(ST_AsText(st.region_geometry), ST_AsText(point_geometry), '(none)') as location,
+tgt.description as target, ch.description as characteristic, un.description as unit,
+COALESCE(cast(msr.numeric_value as varchar), msr.other_value) as value, msr.precision,
+ac.name as actor, tl.name as tool, ql.qualifier 
+FROM 
+target tgt, observation obs, unit un, context ctx, site st, datetime dt, 
+observation_measurement obs_msr, characteristic ch, actor ac, observation_actor obs_ac,
+measurement msr LEFT JOIN tool tl on msr.tool = tl.id
+LEFT JOIN data_qualifier ql on msr.qualifier = ql.id 
+WHERE
+msr.id = obs_msr.measurementID and 
+obs_msr.observationid = obs.id and 
+obs.target = tgt.id and 
+msr.characteristic = ch.id and
+msr.unit = un.id and
+obs.id = obs_ac.observationid and
+obs_ac.actorid = ac.id and
+obs.context = ctx.id and
+ctx.site = st.id and
+st.id = 'Heron_Island' and
+ctx.datetime = dt.id;
+	</query_string>
+</query>
+<query>
+	<north>-23.34</north>
+	<south>-23.54</south>
+	<east>152.01</east>
+	<west>151.81</west>
+	<lat>null</lat>
+	<lon>null</lon>
+	<start_date>null</start_date>
+	<end_date>null</end_date>
+	<target>null</target>
+	<characteristic>null</characteristic>
+	<location>null</location>
+	<actor>null</actor>
+	<measurement_value>null</measurement_value>
+	<unit>null</unit>
+	<research_program>null</research_program>
+	<ecological_process>null</ecological_process>
+	<process_output>null</process_output>
+	<genus>null</genus>
+	<species>null</species>
+	<morphology>null</morphology>
+	<depth>null</depth>
+	<sensor>null</sensor>
+	<description>All unique measurements in 0.1Deg box around Heron Island</description>
+	<north1>null</north1>
+	<south1>null</south1>
+	<east1>null</east1>
+	<west1>null</west1>
+	<lat1>null</lat1>
+	<lon1>null</lon1>
+	<start_date1>null</start_date1>
+	<end_date1>null</end_date1>
+	<target1>null</target1>
+	<characteristic1>null</characteristic1>
+	<location1>null</location1>
+	<actor1>null</actor1>
+	<measurement_value1>null</measurement_value1>
+	<unit1>null</unit1>
+	<research_program1>null</research_program1>
+	<ecological_process1>null</ecological_process1>
+	<process_output1>null</process_output1>
+	<genus1>null</genus1>
+	<species1>null</species1>
+	<morphology1>null</morphology1>
+	<depth1>null</depth1>
+	<sensor1>null</sensor1>
+	<location_filter>null</location_filter>
+	<datetime_filter>null</datetime_filter>
+	<join_query>false</join_query>
+	<join_query_datetime>false</join_query_datetime>
+	<join_query_location>false</join_query_location>
+	<query_string>SELECT dt.startdate, dt.enddate, st.name as locname, COALESCE(ST_AsText(st.region_geometry), ST_AsText(point_geometry), '(none)') as location,
+tgt.description as target, ch.description as characteristic, un.description as unit,
+COALESCE(cast(msr.numeric_value as varchar), msr.other_value) as value, msr.precision,
+ac.name as actor, tl.name as tool, ql.qualifier 
+FROM 
+target tgt, observation obs, unit un, context ctx, site st, datetime dt, 
+observation_measurement obs_msr, characteristic ch, actor ac, observation_actor obs_ac,
+measurement msr LEFT JOIN tool tl on msr.tool = tl.id
+LEFT JOIN data_qualifier ql on msr.qualifier = ql.id 
+WHERE
+msr.id = obs_msr.measurementID and 
+obs_msr.observationid = obs.id and 
+obs.target = tgt.id and 
+msr.characteristic = ch.id and
+msr.unit = un.id and
+obs.id = obs_ac.observationid and
+obs_ac.actorid = ac.id and
+obs.context = ctx.id and
+ctx.site = st.id and
+ctx.datetime = dt.id and 
+(ST_Contains(ST_GeomFromText('POLYGON((-23.34 151.81, -23.54 151.81, -23.54 152.01, -23.34 152.01, -23.34 151.81))',4326), st.point_geometry) or
+ST_Contains(ST_GeomFromText('POLYGON((-23.34 151.81, -23.54 151.81, -23.54 152.01, -23.34 152.01, -23.34 151.81))',4326), st.region_geometry));
+	</query_string>
+</query>
+<query>
+	<north>null</north>
+	<south>null</south>
+	<east>null</east>
+	<west>null</west>
+	<lat>null</lat>
+	<lon>null</lon>
+	<start_date>null</start_date>
+	<end_date>null</end_date>
+	<target>null</target>
+	<characteristic>null</characteristic>
+	<location>Seab</location>
+	<actor>Juan Carlos Ortiz</actor>
+	<measurement_value>null</measurement_value>
+	<unit>null</unit>
+	<research_program>null</research_program>
+	<ecological_process>null</ecological_process>
+	<process_output>null</process_output>
+	<genus>null</genus>
+	<species>null</species>
+	<morphology>null</morphology>
+	<depth>null</depth>
+	<sensor>null</sensor>
+	<description>All unique measurements at the Seab Site by Juan Carlos</description>
+	<north1>null</north1>
+	<south1>null</south1>
+	<east1>null</east1>
+	<west1>null</west1>
+	<lat1>null</lat1>
+	<lon1>null</lon1>
+	<start_date1>null</start_date1>
+	<end_date1>null</end_date1>
+	<target1>null</target1>
+	<characteristic1>null</characteristic1>
+	<location1>null</location1>
+	<actor1>null</actor1>
+	<measurement_value1>null</measurement_value1>
+	<unit1>null</unit1>
+	<research_program1>null</research_program1>
+	<ecological_process1>null</ecological_process1>
+	<process_output1>null</process_output1>
+	<genus1>null</genus1>
+	<species1>null</species1>
+	<morphology1>null</morphology1>
+	<depth1>null</depth1>
+	<sensor1>null</sensor1>
+	<location_filter>null</location_filter>
+	<datetime_filter>null</datetime_filter>
+	<join_query>false</join_query>
+	<join_query_datetime>false</join_query_datetime>
+	<join_query_location>false</join_query_location>
+	<query_string>SELECT dt.startdate, dt.enddate, st.name as locname, COALESCE(ST_AsText(st.region_geometry), ST_AsText(point_geometry), '(none)') as location,
+tgt.description as target, ch.description as characteristic, un.description as unit,
+COALESCE(cast(msr.numeric_value as varchar), msr.other_value) as value, msr.precision,
+ac.name as actor, tl.name as tool, ql.qualifier 
+FROM 
+target tgt, observation obs, unit un, context ctx, site st, datetime dt, 
+observation_measurement obs_msr, characteristic ch, actor ac, observation_actor obs_ac,
+measurement msr LEFT JOIN tool tl on msr.tool = tl.id
+LEFT JOIN data_qualifier ql on msr.qualifier = ql.id 
+WHERE
+msr.id = obs_msr.measurementID and 
+obs_msr.observationid = obs.id and 
+obs.target = tgt.id and 
+msr.characteristic = ch.id and
+msr.unit = un.id and
+obs.id = obs_ac.observationid and
+obs_ac.actorid = ac.id and
+ac.name like 'Juan%' and
+obs.context = ctx.id and
+ctx.site = st.id and
+st.id = 'SEAB' and
+ctx.datetime = dt.id;
+	</query_string>
+</query>
+<query>
+	<north>-22.0</north>
+	<south>-22.5</south>
+	<east>153.0</east>
+	<west>151.0</west>
+	<lat>null</lat>
+	<lon>null</lon>
+	<start_date>null</start_date>
+	<end_date>null</end_date>
+	<target>null</target>
+	<characteristic>null</characteristic>
+	<location>null</location>
+	<actor>null</actor>
+	<measurement_value>null</measurement_value>
+	<unit>null</unit>
+	<research_program>null</research_program>
+	<ecological_process>null</ecological_process>
+	<process_output>null</process_output>
+	<genus>null</genus>
+	<species>null</species>
+	<morphology>null</morphology>
+	<depth>null</depth>
+	<sensor>null</sensor>
+	<description>All the unique measurements between the coordinates</description>
+	<north1>null</north1>
+	<south1>null</south1>
+	<east1>null</east1>
+	<west1>null</west1>
+	<lat1>null</lat1>
+	<lon1>null</lon1>
+	<start_date1>null</start_date1>
+	<end_date1>null</end_date1>
+	<target1>null</target1>
+	<characteristic1>null</characteristic1>
+	<location1>null</location1>
+	<actor1>null</actor1>
+	<measurement_value1>null</measurement_value1>
+	<unit1>null</unit1>
+	<research_program1>null</research_program1>
+	<ecological_process1>null</ecological_process1>
+	<process_output1>null</process_output1>
+	<genus1>null</genus1>
+	<species1>null</species1>
+	<morphology1>null</morphology1>
+	<depth1>null</depth1>
+	<sensor1>null</sensor1>
+	<location_filter>null</location_filter>
+	<datetime_filter>null</datetime_filter>
+	<join_query>false</join_query>
+	<join_query_datetime>false</join_query_datetime>
+	<join_query_location>false</join_query_location>
+	<query_string>SELECT dt.startdate, dt.enddate, st.name as locname, COALESCE(ST_AsText(st.region_geometry), ST_AsText(point_geometry), '(none)') as location,
+tgt.description as target, ch.description as characteristic, un.description as unit,
+COALESCE(cast(msr.numeric_value as varchar), msr.other_value) as value, msr.precision,
+ac.name as actor, tl.name as tool, ql.qualifier 
+FROM 
+target tgt, observation obs, unit un, context ctx, site st, datetime dt, 
+observation_measurement obs_msr, characteristic ch, actor ac, observation_actor obs_ac,
+measurement msr LEFT JOIN tool tl on msr.tool = tl.id
+LEFT JOIN data_qualifier ql on msr.qualifier = ql.id 
+WHERE
+msr.id = obs_msr.measurementID and 
+obs_msr.observationid = obs.id and 
+obs.target = tgt.id and 
+msr.characteristic = ch.id and
+msr.unit = un.id and
+obs.id = obs_ac.observationid and
+obs_ac.actorid = ac.id and
+obs.context = ctx.id and
+ctx.site = st.id and
+ctx.datetime = dt.id and 
+(ST_Contains(ST_GeomFromText('POLYGON((-22.0 151.0, -22.0 153.0, -22.5 153.0, -22.5 151.0, -22.0 151.0))',4326), st.point_geometry) or
+ST_Contains(ST_GeomFromText('POLYGON((-22.0 151.0, -22.0 153.0, -22.5 153.0, -22.5 151.0, -22.0 151.0))',4326), st.region_geometry));
+	</query_string>
+</query>
+<query>
+	<north>null</north>
+	<south>null</south>
+	<east>null</east>
+	<west>null</west>
+	<lat>null</lat>
+	<lon>null</lon>
+	<start_date>2001-12-01 00:00:00</start_date>
+	<end_date>2002-02-28 00:00:00</end_date>
+	<target>null</target>
+	<characteristic>null</characteristic>
+	<location>null</location>
+	<actor>null</actor>
+	<measurement_value>null</measurement_value>
+	<unit>null</unit>
+	<research_program>null</research_program>
+	<ecological_process>null</ecological_process>
+	<process_output>null</process_output>
+	<genus>null</genus>
+	<species>null</species>
+	<morphology>null</morphology>
+	<depth>null</depth>
+	<sensor>null</sensor>
+	<description>All unique measurements in date range</description>
+	<north1>null</north1>
+	<south1>null</south1>
+	<east1>null</east1>
+	<west1>null</west1>
+	<lat1>null</lat1>
+	<lon1>null</lon1>
+	<start_date1>null</start_date1>
+	<end_date1>null</end_date1>
+	<target1>null</target1>
+	<characteristic1>null</characteristic1>
+	<location1>null</location1>
+	<actor1>null</actor1>
+	<measurement_value1>null</measurement_value1>
+	<unit1>null</unit1>
+	<research_program1>null</research_program1>
+	<ecological_process1>null</ecological_process1>
+	<process_output1>null</process_output1>
+	<genus1>null</genus1>
+	<species1>null</species1>
+	<morphology1>null</morphology1>
+	<depth1>null</depth1>
+	<sensor1>null</sensor1>
+	<location_filter>null</location_filter>
+	<datetime_filter>null</datetime_filter>
+	<join_query>false</join_query>
+	<join_query_datetime>false</join_query_datetime>
+	<join_query_location>false</join_query_location>
+	<query_string>SELECT dt.startdate, dt.enddate, st.name as locname, COALESCE(ST_AsText(st.region_geometry), ST_AsText(point_geometry), '(none)') as location,
+tgt.description as target, ch.description as characteristic, un.description as unit,
+COALESCE(cast(msr.numeric_value as varchar), msr.other_value) as value, msr.precision,
+ac.name as actor, tl.name as tool, ql.qualifier 
+FROM 
+target tgt, observation obs, unit un, context ctx, site st, datetime dt, 
+observation_measurement obs_msr, characteristic ch, actor ac, observation_actor obs_ac,
+measurement msr LEFT JOIN tool tl on msr.tool = tl.id
+LEFT JOIN data_qualifier ql on msr.qualifier = ql.id 
+WHERE
+msr.id = obs_msr.measurementID and 
+obs_msr.observationid = obs.id and 
+obs.target = tgt.id and 
+msr.characteristic = ch.id and
+msr.unit = un.id and
+obs.id = obs_ac.observationid and
+obs_ac.actorid = ac.id and
+obs.context = ctx.id and
+ctx.site = st.id and
+ctx.datetime = dt.id and 
+dt.startdate &gt;= '2001-12-01 00:00:00' and
+(dt.enddate is null or dt.enddate &lt;= '2002-02-28 00:00:00');
+	</query_string>
+</query>
+<query>
+	<north>null</north>
+	<south>null</south>
+	<east>null</east>
+	<west>null</west>
+	<lat>-23.4422</lat>
+	<lon>151.9106</lon>
+	<start_date>null</start_date>
+	<end_date>null</end_date>
+	<target>null</target>
+	<characteristic>null</characteristic>
+	<location>null</location>
+	<actor>null</actor>
+	<measurement_value>null</measurement_value>
+	<unit>null</unit>
+	<research_program>null</research_program>
+	<ecological_process>null</ecological_process>
+	<process_output>null</process_output>
+	<genus>null</genus>
+	<species>null</species>
+	<morphology>null</morphology>
+	<depth>null</depth>
+	<sensor>null</sensor>
+	<description>All unique measurements at the specified location</description>
+	<north1>null</north1>
+	<south1>null</south1>
+	<east1>null</east1>
+	<west1>null</west1>
+	<lat1>null</lat1>
+	<lon1>null</lon1>
+	<start_date1>null</start_date1>
+	<end_date1>null</end_date1>
+	<target1>null</target1>
+	<characteristic1>null</characteristic1>
+	<location1>null</location1>
+	<actor1>null</actor1>
+	<measurement_value1>null</measurement_value1>
+	<unit1>null</unit1>
+	<research_program1>null</research_program1>
+	<ecological_process1>null</ecological_process1>
+	<process_output1>null</process_output1>
+	<genus1>null</genus1>
+	<species1>null</species1>
+	<morphology1>null</morphology1>
+	<depth1>null</depth1>
+	<sensor1>null</sensor1>
+	<location_filter>null</location_filter>
+	<datetime_filter>null</datetime_filter>
+	<join_query>false</join_query>
+	<join_query_datetime>false</join_query_datetime>
+	<join_query_location>false</join_query_location>
+	<query_string>SELECT dt.startdate, dt.enddate, st.name as locname, ST_AsText(point_geometry) as location,
+tgt.description as target, ch.description as characteristic, un.description as unit,
+COALESCE(cast(msr.numeric_value as varchar), msr.other_value) as value, msr.precision,
+ac.name as actor, tl.name as tool, ql.qualifier 
+FROM 
+target tgt, observation obs, unit un, context ctx, site st, datetime dt, 
+observation_measurement obs_msr, characteristic ch, actor ac, observation_actor obs_ac,
+measurement msr LEFT JOIN tool tl on msr.tool = tl.id
+LEFT JOIN data_qualifier ql on msr.qualifier = ql.id 
+WHERE
+msr.id = obs_msr.measurementID and 
+obs_msr.observationid = obs.id and 
+obs.target = tgt.id and 
+msr.characteristic = ch.id and
+msr.unit = un.id and
+obs.id = obs_ac.observationid and
+obs_ac.actorid = ac.id and
+obs.context = ctx.id and
+ctx.site = st.id and
+ctx.datetime = dt.id and
+ST_GeomFromText('POINT(-23.4422 151.9106)',4326) = st.point_geometry;
+	</query_string>
+</query>
+<query>
+	<north>null</north>
+	<south>null</south>
+	<east>null</east>
+	<west>null</west>
+	<lat>null</lat>
+	<lon>null</lon>
+	<start_date>null</start_date>
+	<end_date>null</end_date>
+	<target>null</target>
+	<characteristic>null</characteristic>
+	<location>null</location>
+	<actor>null</actor>
+	<measurement_value>null</measurement_value>
+	<unit>ml</unit>
+	<research_program>null</research_program>
+	<ecological_process>null</ecological_process>
+	<process_output>null</process_output>
+	<genus>null</genus>
+	<species>null</species>
+	<morphology>null</morphology>
+	<depth>null</depth>
+	<sensor>null</sensor>
+	<description>All unique measurements with a specific unit</description>
+	<north1>null</north1>
+	<south1>null</south1>
+	<east1>null</east1>
+	<west1>null</west1>
+	<lat1>null</lat1>
+	<lon1>null</lon1>
+	<start_date1>null</start_date1>
+	<end_date1>null</end_date1>
+	<target1>null</target1>
+	<characteristic1>null</characteristic1>
+	<location1>null</location1>
+	<actor1>null</actor1>
+	<measurement_value1>null</measurement_value1>
+	<unit1>null</unit1>
+	<research_program1>null</research_program1>
+	<ecological_process1>null</ecological_process1>
+	<process_output1>null</process_output1>
+	<genus1>null</genus1>
+	<species1>null</species1>
+	<morphology1>null</morphology1>
+	<depth1>null</depth1>
+	<sensor1>null</sensor1>
+	<location_filter>null</location_filter>
+	<datetime_filter>null</datetime_filter>
+	<join_query>false</join_query>
+	<join_query_datetime>false</join_query_datetime>
+	<join_query_location>false</join_query_location>
+	<query_string>SELECT dt.startdate, dt.enddate, st.name as locname, COALESCE(ST_AsText(st.region_geometry), ST_AsText(point_geometry), '(none)') as location,
+tgt.description as target, ch.description as characteristic, un.description as unit,
+COALESCE(cast(msr.numeric_value as varchar), msr.other_value) as value, msr.precision,
+ac.name as actor, tl.name as tool, ql.qualifier 
+FROM 
+target tgt, observation obs, unit un, context ctx, site st, datetime dt, 
+observation_measurement obs_msr, characteristic ch, actor ac, observation_actor obs_ac,
+measurement msr LEFT JOIN tool tl on msr.tool = tl.id
+LEFT JOIN data_qualifier ql on msr.qualifier = ql.id 
+WHERE
+msr.id = obs_msr.measurementID and 
+obs_msr.observationid = obs.id and 
+obs.target = tgt.id and 
+msr.characteristic = ch.id and
+msr.unit = un.id and
+obs.id = obs_ac.observationid and
+un.name = 'ml' and
+obs_ac.actorid = ac.id and
+obs.context = ctx.id and
+ctx.site = st.id and
+ctx.datetime = dt.id;
+	</query_string>
+</query>
+</queries>

@@ -1,0 +1,457 @@
+<-- All subsclasses of Observations : Get all the observations subclasses : 0 -->
+PREFIX event: <http://maenad.itee.uq.edu.au/metadata/Event#>
+PREFIX actor: <http://maenad.itee.uq.edu.au/metadata/Actor#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?events ?classes
+WHERE {
+  ?events rdf:type ?classes .
+  ?classes rdfs:subClassOf event:Observation .
+}
+<-- END -->
+<-- Observations by Guillermo Diaz : Get all the unique observations by Guillermo Diaz : 0 -->
+PREFIX actor: <http://maenad.itee.uq.edu.au/metadata/Actor.owl#>
+PREFIX event: <http://maenad.itee.uq.edu.au/metadata/Event.owl#>
+PREFIX dateTime: <http://maenad.itee.uq.edu.au/metadata/DateTime.owl#>
+PREFIX location: <http://maenad.itee.uq.edu.au/metadata/Location.owl#>
+PREFIX organism: <http://maenad.itee.uq.edu.au/metadata/Organism.owl#>
+PREFIX context: <http://maenad.itee.uq.edu.au/metadata/Context.owl#>
+PREFIX unit: <http://maenad.itee.uq.edu.au/metadata/Unit.rdf#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?actorName ?commonName ?date ?genusName ?latitude ?locationName ?longitude ?property ?unit ?value
+WHERE {
+  ?dateTime dateTime:has_datetime ?date .
+  ?location location:has_name ?locationName .
+  ?location location:has_latitude ?latitude .
+  ?location location:has_longitude ?longitude .
+  ?context context:has_location ?location .
+  ?context context:has_datetime ?dateTime .
+  ?propertyID rdfs:label ?property .
+  ?event event:has_value ?value .
+  ?event event:has_property ?propertyID .
+  ?unitID rdfs:label ?unit .
+  ?organism organism:has_genus_name ?genusName .
+  ?organism organism:has_common_name ?commonName .
+  ?event event:has_unit ?unitID .
+  ?event event:has_context ?context .
+  ?event event:has_substance ?organism .
+  ?event event:has_actor ?actor .
+  ?actor actor:has_name ?actorName .
+  ?actor actor:has_name "Guillermo Diaz"^^xsd:string .
+}
+ORDER BY ASC(?locationName)
+<-- END -->
+<-- Observations by Juan Carlos Ortiz : Get all the unique observations by Juan Carlos Ortiz : 0 -->
+PREFIX actor: <http://maenad.itee.uq.edu.au/metadata/Actor.owl#>
+PREFIX event: <http://maenad.itee.uq.edu.au/metadata/Event.owl#>
+PREFIX dateTime: <http://maenad.itee.uq.edu.au/metadata/DateTime.owl#>
+PREFIX location: <http://maenad.itee.uq.edu.au/metadata/Location.owl#>
+PREFIX organism: <http://maenad.itee.uq.edu.au/metadata/Organism.owl#>
+PREFIX context: <http://maenad.itee.uq.edu.au/metadata/Context.owl#>
+PREFIX unit: <http://maenad.itee.uq.edu.au/metadata/Unit.rdf#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?actorName ?commonName ?genusName ?locationName ?date ?latitude ?longitude ?value ?property ?unit
+WHERE {
+  ?dateTime dateTime:has_datetime ?date .
+  ?location location:has_name ?locationName .
+  ?location location:has_latitude ?latitude .
+  ?location location:has_longitude ?longitude .
+  ?context context:has_location ?location .
+  ?context context:has_datetime ?dateTime .
+  ?propertyID rdfs:label ?property .
+  ?event event:has_value ?value .
+  ?event event:has_property ?propertyID .
+  ?unitID rdfs:label ?unit .
+  ?organism organism:has_genus_name ?genusName .
+  ?organism organism:has_common_name ?commonName .
+  ?event event:has_unit ?unitID .
+  ?event event:has_context ?context .
+  ?event event:has_substance ?organism .
+  ?event event:has_actor ?actor .
+  ?actor actor:has_name ?actorName .
+  ?actor actor:has_name "Juan Carlos Ortiz"^^xsd:string .
+}
+ORDER BY ASC(?event)
+<-- END -->
+<-- All agla data : Get all the unique alga observations : 0 -->
+PREFIX actor: <http://maenad.itee.uq.edu.au/metadata/Actor.owl#>
+PREFIX event: <http://maenad.itee.uq.edu.au/metadata/Event.owl#>
+PREFIX dateTime: <http://maenad.itee.uq.edu.au/metadata/DateTime.owl#>
+PREFIX location: <http://maenad.itee.uq.edu.au/metadata/Location.owl#>
+PREFIX organism: <http://maenad.itee.uq.edu.au/metadata/Organism.owl#>
+PREFIX context: <http://maenad.itee.uq.edu.au/metadata/Context.owl#>
+PREFIX unit: <http://maenad.itee.uq.edu.au/metadata/Unit.rdf#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?commonName ?genusName ?locationName ?date ?latitude ?longitude ?value ?property ?unit
+WHERE {
+  ?dateTime dateTime:has_datetime ?date .
+  ?location location:has_name ?locationName .
+  ?location location:has_latitude ?latitude .
+  ?location location:has_longitude ?longitude .
+  ?context context:has_location ?location .
+  ?context context:has_datetime ?dateTime .
+  ?propertyID rdfs:label ?property .
+  ?event event:has_value ?value .
+  ?event event:has_property ?propertyID .
+  ?unitID rdfs:label ?unit .
+  ?event event:has_unit ?unitID .
+  ?event event:has_context ?context .
+  ?actor actor:has_name ?actorName .
+  ?event event:has_actor ?actor .
+  ?event event:has_substance ?organism .
+  ?organism organism:has_genus_name ?genusName .
+  ?organism organism:has_common_name ?commonName .
+  ?organism rdf:type organism:Algae .
+}
+ORDER BY ASC(?locationName)
+<-- END -->
+<-- All coral data : Get all the unique coral observations : 0 -->
+PREFIX actor: <http://maenad.itee.uq.edu.au/metadata/Actor.owl#>
+PREFIX event: <http://maenad.itee.uq.edu.au/metadata/Event.owl#>
+PREFIX dateTime: <http://maenad.itee.uq.edu.au/metadata/DateTime.owl#>
+PREFIX location: <http://maenad.itee.uq.edu.au/metadata/Location.owl#>
+PREFIX organism: <http://maenad.itee.uq.edu.au/metadata/Organism.owl#>
+PREFIX context: <http://maenad.itee.uq.edu.au/metadata/Context.owl#>
+PREFIX unit: <http://maenad.itee.uq.edu.au/metadata/Unit.rdf#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?actorName ?commonName ?genusName ?locationName ?date ?latitude ?longitude ?value ?property ?unit
+WHERE {
+  ?dateTime dateTime:has_datetime ?date .
+  ?location location:has_name ?locationName .
+  ?location location:has_latitude ?latitude .
+  ?location location:has_longitude ?longitude .
+  ?context context:has_location ?location .
+  ?context context:has_datetime ?dateTime .
+  ?propertyID rdfs:label ?property .
+  ?event event:has_value ?value .
+  ?event event:has_property ?propertyID .
+  ?unitID rdfs:label ?unit .
+  ?event event:has_unit ?unitID .
+  ?event event:has_context ?context .
+  ?actor actor:has_name ?actorName .
+  ?event event:has_actor ?actor .
+  ?event event:has_substance ?organism .
+  ?organism organism:has_genus_name ?genusName .
+  ?organism organism:has_common_name ?commonName .
+  ?organism rdf:type organism:Coral .
+}
+ORDER BY ASC(?genusName)
+<-- END -->
+<-- All alga data by Guillermo Diaz : Get all the unique algae observations by Guillermo Diaz : 0 -->
+PREFIX actor: <http://maenad.itee.uq.edu.au/metadata/Actor.owl#>
+PREFIX event: <http://maenad.itee.uq.edu.au/metadata/Event.owl#>
+PREFIX dateTime: <http://maenad.itee.uq.edu.au/metadata/DateTime.owl#>
+PREFIX location: <http://maenad.itee.uq.edu.au/metadata/Location.owl#>
+PREFIX organism: <http://maenad.itee.uq.edu.au/metadata/Organism.owl#>
+PREFIX context: <http://maenad.itee.uq.edu.au/metadata/Context.owl#>
+PREFIX unit: <http://maenad.itee.uq.edu.au/metadata/Unit.rdf#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?actorName ?commonName ?genusName ?locationName ?date ?latitude ?longitude ?value ?property ?unit
+WHERE {
+  ?dateTime dateTime:has_datetime ?date .
+  ?location location:has_name ?locationName .
+  ?location location:has_latitude ?latitude .
+  ?location location:has_longitude ?longitude .
+  ?context context:has_location ?location .
+  ?context context:has_datetime ?dateTime .
+  ?propertyID rdfs:label ?property .
+  ?event event:has_value ?value .
+  ?event event:has_property ?propertyID .
+  ?unitID rdfs:label ?unit .
+  ?event event:has_unit ?unitID .
+  ?event event:has_context ?context .
+  ?event event:has_substance ?organism .
+  ?event event:has_actor ?actor .
+  ?organism organism:has_genus_name ?genusName .
+  ?organism organism:has_common_name ?commonName .
+  ?organism rdf:type organism:Algae .
+  ?actor actor:has_name ?actorName .
+  ?actor actor:has_name "Guillermo Diaz"^^xsd:string .
+}
+ORDER BY ASC(?date)
+<-- END -->
+<-- All Coral data from Juan Carlos Ortiz : Get all the unique coral observations by Juan Carlos Ortiz : 0 -->
+PREFIX actor: <http://maenad.itee.uq.edu.au/metadata/Actor.owl#>
+PREFIX event: <http://maenad.itee.uq.edu.au/metadata/Event.owl#>
+PREFIX dateTime: <http://maenad.itee.uq.edu.au/metadata/DateTime.owl#>
+PREFIX location: <http://maenad.itee.uq.edu.au/metadata/Location.owl#>
+PREFIX organism: <http://maenad.itee.uq.edu.au/metadata/Organism.owl#>
+PREFIX context: <http://maenad.itee.uq.edu.au/metadata/Context.owl#>
+PREFIX unit: <http://maenad.itee.uq.edu.au/metadata/Unit.rdf#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?actorName ?commonName ?genusName ?locationName ?date ?latitude ?longitude ?value ?property ?unit
+WHERE {
+  ?dateTime dateTime:has_datetime ?date .
+  ?location location:has_name ?locationName .
+  ?location location:has_latitude ?latitude .
+  ?location location:has_longitude ?longitude .
+  ?context context:has_location ?location .
+  ?context context:has_datetime ?dateTime .
+  ?propertyID rdfs:label ?property .
+  ?event event:has_value ?value .
+  ?event event:has_property ?propertyID .
+  ?unitID rdfs:label ?unit .
+  ?event event:has_unit ?unitID .
+  ?event event:has_context ?context .
+  ?event event:has_substance ?organism .
+  ?event event:has_actor ?actor .
+  ?organism organism:has_genus_name ?genusName .
+  ?organism organism:has_common_name ?commonName .
+  ?organism rdf:type organism:Coral .
+  ?actor actor:has_name ?actorName .
+  ?actor actor:has_name "Juan Carlos Ortiz"^^xsd:string .
+}
+ORDER BY ASC(?value)
+<-- END -->
+<-- All 'Lobophora' sightings : Find all the unique observations of 'Lobophora' : 0 -->
+PREFIX actor: <http://maenad.itee.uq.edu.au/metadata/Actor.owl#>
+PREFIX event: <http://maenad.itee.uq.edu.au/metadata/Event.owl#>
+PREFIX dateTime: <http://maenad.itee.uq.edu.au/metadata/DateTime.owl#>
+PREFIX location: <http://maenad.itee.uq.edu.au/metadata/Location.owl#>
+PREFIX organism: <http://maenad.itee.uq.edu.au/metadata/Organism.owl#>
+PREFIX context: <http://maenad.itee.uq.edu.au/metadata/Context.owl#>
+PREFIX unit: <http://maenad.itee.uq.edu.au/metadata/Unit.rdf#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?actorName ?commonName ?genusName ?locationName ?date ?latitude ?longitude ?value ?property ?unit
+WHERE {
+  ?dateTime dateTime:has_datetime ?date .
+  ?location location:has_name ?locationName .
+  ?location location:has_latitude ?latitude .
+  ?location location:has_longitude ?longitude .
+  ?context context:has_location ?location .
+  ?context context:has_datetime ?dateTime .
+  ?propertyID rdfs:label ?property .
+  ?event event:has_value ?value .
+  ?event event:has_property ?propertyID .
+  ?unitID rdfs:label ?unit .
+  ?event event:has_unit ?unitID .
+  ?event event:has_context ?context .
+  ?event event:has_substance ?organism .
+  ?actor actor:has_name ?actorName .
+  ?event event:has_actor ?actor .
+  ?organism organism:has_common_name ?commonName .
+  ?organism organism:has_genus_name ?genusName .
+  ?organism organism:has_genus_name "Lobophora"^^xsd:string .
+}
+ORDER BY ASC(?locationName)
+<-- END -->
+<-- Middle Island organism observations : All organism observations at Middle Island : 0 -->
+PREFIX actor: <http://maenad.itee.uq.edu.au/metadata/Actor.owl#>
+PREFIX event: <http://maenad.itee.uq.edu.au/metadata/Event.owl#>
+PREFIX dateTime: <http://maenad.itee.uq.edu.au/metadata/DateTime.owl#>
+PREFIX location: <http://maenad.itee.uq.edu.au/metadata/Location.owl#>
+PREFIX organism: <http://maenad.itee.uq.edu.au/metadata/Organism.owl#>
+PREFIX substance: <http://maenad.itee.uq.edu.au/metadata/Substance.owl#>
+PREFIX context: <http://maenad.itee.uq.edu.au/metadata/Context.owl#>
+PREFIX unit: <http://maenad.itee.uq.edu.au/metadata/Unit.rdf#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?actorName ?commonName ?genusName ?locationName ?date ?latitude ?longitude ?value ?property ?unit
+WHERE {
+  ?dateTime dateTime:has_datetime ?date .
+  ?propertyID rdfs:label ?property .
+  ?event event:has_value ?value .
+  ?event event:has_property ?propertyID .
+  ?unitID rdfs:label ?unit .
+  ?event event:has_unit ?unitID .
+  ?event event:has_context ?context .
+  ?substance organism:has_common_name ?commonName .
+  ?substance organism:has_genus_name ?genusName .
+  ?event event:has_substance ?substance .
+  ?actor actor:has_name ?actorName .
+  ?event event:has_actor ?actor .
+  ?location location:has_latitude ?latitude .
+  ?location location:has_longitude ?longitude .
+  ?context context:has_location ?location .
+  ?context context:has_datetime ?dateTime .
+  ?location location:has_name ?locationName .
+  ?location location:has_name "Middle Island"^^xsd:string .
+}
+ORDER BY ASC(?substance)
+<-- END -->
+<-- Middle Island environment observations : All environment observation at Middle Island : 1 -->
+PREFIX actor: <http://maenad.itee.uq.edu.au/metadata/Actor.owl#>
+PREFIX event: <http://maenad.itee.uq.edu.au/metadata/Event.owl#>
+PREFIX dateTime: <http://maenad.itee.uq.edu.au/metadata/DateTime.owl#>
+PREFIX location: <http://maenad.itee.uq.edu.au/metadata/Location.owl#>
+PREFIX abstraction: <http://maenad.itee.uq.edu.au/metadata/Abstraction.owl#>
+PREFIX context: <http://maenad.itee.uq.edu.au/metadata/Context.owl#>
+PREFIX unit: <http://maenad.itee.uq.edu.au/metadata/Unit.rdf#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?actorName ?substanceName ?locationName ?date ?latitude ?longitude ?value ?property ?unit
+WHERE {
+  ?dateTime dateTime:has_datetime ?date .
+  ?propertyID rdfs:label ?property .
+  ?event event:has_value ?value .
+  ?event event:has_property ?propertyID .
+  ?unitID rdfs:label ?unit .
+  ?event event:has_unit ?unitID .
+  ?event event:has_context ?context .
+  ?event event:has_substance ?substance .
+  ?actor actor:has_name ?actorName .
+  ?event event:has_actor ?actor .
+  ?location location:has_latitude ?latitude .
+  ?location location:has_longitude ?longitude .
+  ?context context:has_location ?location .
+  ?context context:has_datetime ?dateTime .
+  ?substance abstraction:has_description ?substanceName .
+  ?substance rdf:type abstraction:Environment .
+  ?location location:has_name ?locationName .
+  ?location location:has_name "Middle Island"^^xsd:string .
+}
+ORDER BY ASC(?abstractionDescription)
+<-- END -->
+<-- Middle Island sand observations : All sand enviroment observations at Middle Island : 1 -->
+PREFIX actor: <http://maenad.itee.uq.edu.au/metadata/Actor.owl#>
+PREFIX event: <http://maenad.itee.uq.edu.au/metadata/Event.owl#>
+PREFIX dateTime: <http://maenad.itee.uq.edu.au/metadata/DateTime.owl#>
+PREFIX location: <http://maenad.itee.uq.edu.au/metadata/Location.owl#>
+PREFIX abstraction: <http://maenad.itee.uq.edu.au/metadata/Abstraction.owl#>
+PREFIX context: <http://maenad.itee.uq.edu.au/metadata/Context.owl#>
+PREFIX unit: <http://maenad.itee.uq.edu.au/metadata/Unit.rdf#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?actorName ?substanceName ?locationName ?date ?latitude ?longitude ?value ?property ?unit
+WHERE {
+  ?dateTime dateTime:has_datetime ?date .
+  ?propertyID rdfs:label ?property .
+  ?event event:has_value ?value .
+  ?event event:has_property ?propertyID .
+  ?unitID rdfs:label ?unit .
+  ?event event:has_unit ?unitID .
+  ?event event:has_context ?context .
+  ?event event:has_substance ?substance .
+  ?actor actor:has_name ?actorName .
+  ?event event:has_actor ?actor .
+  ?location location:has_latitude ?latitude .
+  ?location location:has_longitude ?longitude .
+  ?context context:has_location ?location .
+  ?context context:has_datetime ?dateTime .
+  ?substance abstraction:has_description ?substanceName .
+  ?substance abstraction:has_description "Sand"^^xsd:string .
+  ?substance rdf:type abstraction:Environment .
+  ?location location:has_name ?locationName .
+  ?location location:has_name "Middle Island"^^xsd:string .
+}
+ORDER BY ASC(?abstractionDescription)
+<-- END -->
+<-- Regular Expression sand observations : All sand environment observations using a regular expression : 1 -->
+PREFIX actor: <http://maenad.itee.uq.edu.au/metadata/Actor.owl#>
+PREFIX event: <http://maenad.itee.uq.edu.au/metadata/Event.owl#>
+PREFIX dateTime: <http://maenad.itee.uq.edu.au/metadata/DateTime.owl#>
+PREFIX location: <http://maenad.itee.uq.edu.au/metadata/Location.owl#>
+PREFIX abstraction: <http://maenad.itee.uq.edu.au/metadata/Abstraction.owl#>
+PREFIX context: <http://maenad.itee.uq.edu.au/metadata/Context.owl#>
+PREFIX unit: <http://maenad.itee.uq.edu.au/metadata/Unit.rdf#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?actorName ?substanceName ?locationName ?date ?latitude ?longitude ?value ?property ?unit
+WHERE {
+  ?dateTime dateTime:has_datetime ?date .
+  ?propertyID rdfs:label ?property .
+  ?event event:has_value ?value .
+  ?event event:has_property ?propertyID .
+  ?unitID rdfs:label ?unit .
+  ?event event:has_unit ?unitID .
+  ?event event:has_context ?context .
+  ?event event:has_substance ?substance .
+  ?actor actor:has_name ?actorName .
+  ?event event:has_actor ?actor .
+  ?location location:has_latitude ?latitude .
+  ?location location:has_longitude ?longitude .
+  ?location location:has_name ?locationName .
+  ?context context:has_location ?location .
+  ?context context:has_datetime ?dateTime .
+  ?substance abstraction:has_description ?substanceName .
+  ?substance rdf:type abstraction:Environment .
+FILTER (REGEX(str(?substanceName), "Sand"))
+}
+ORDER BY ASC(?abstractionDescription)
+<-- END -->
+<-- Union of data from Middle and Maille Islands : Union of environment observation at Middle and Maille Islands : 1 -->
+PREFIX actor: <http://maenad.itee.uq.edu.au/metadata/Actor.owl#>
+PREFIX event: <http://maenad.itee.uq.edu.au/metadata/Event.owl#>
+PREFIX dateTime: <http://maenad.itee.uq.edu.au/metadata/DateTime.owl#>
+PREFIX location: <http://maenad.itee.uq.edu.au/metadata/Location.owl#>
+PREFIX abstraction: <http://maenad.itee.uq.edu.au/metadata/Abstraction.owl#>
+PREFIX context: <http://maenad.itee.uq.edu.au/metadata/Context.owl#>
+PREFIX unit: <http://maenad.itee.uq.edu.au/metadata/Unit.rdf#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?actorName ?substanceName ?locationName ?date ?latitude ?longitude ?value ?property ?unit
+WHERE
+{
+ {
+  ?dateTime dateTime:has_datetime ?date .
+  ?propertyID rdfs:label ?property .
+  ?event event:has_value ?value .
+  ?event event:has_property ?propertyID .
+  ?unitID rdfs:label ?unit .
+  ?event event:has_unit ?unitID .
+  ?event event:has_context ?context .
+  ?event event:has_substance ?substance .
+  ?actor actor:has_name ?actorName .
+  ?event event:has_actor ?actor .
+  ?location location:has_latitude ?latitude .
+  ?location location:has_longitude ?longitude .
+  ?context context:has_location ?location .
+  ?context context:has_datetime ?dateTime .
+  ?substance abstraction:has_description ?substanceName .
+  ?substance abstraction:has_description "Sand"^^xsd:string .
+  ?substance rdf:type abstraction:Environment .
+  ?location location:has_name ?locationName .
+  ?location location:has_name "Middle Island"^^xsd:string .
+ }
+ UNION
+ {
+ ?dateTime dateTime:has_datetime ?date .
+  ?propertyID rdfs:label ?property .
+  ?event event:has_value ?value .
+  ?event event:has_property ?propertyID .
+  ?unitID rdfs:label ?unit .
+  ?event event:has_unit ?unitID .
+  ?event event:has_context ?context .
+  ?event event:has_substance ?substance .
+  ?actor actor:has_name ?actorName .
+  ?event event:has_actor ?actor .
+  ?location location:has_latitude ?latitude .
+  ?location location:has_longitude ?longitude .
+  ?context context:has_location ?location .
+  ?context context:has_datetime ?dateTime .
+  ?substance abstraction:has_description ?substanceName .
+  ?substance abstraction:has_description "Sand"^^xsd:string .
+  ?substance rdf:type abstraction:Environment .
+  ?location location:has_name ?locationName .
+  ?location location:has_name "Maille Island"^^xsd:string .
+ }
+}
+<-- END -->

@@ -1,0 +1,97 @@
+<!--
+  ~ Copyright (c) 2011, The University of Queensland
+  ~ All rights reserved.
+  ~
+  ~ Redistribution and use in source and binary forms, with or without
+  ~ modification, are permitted provided that the following conditions are met:
+  ~     * Redistributions of source code must retain the above copyright
+  ~       notice, this list of conditions and the following disclaimer.
+  ~     * Redistributions in binary form must reproduce the above copyright
+  ~       notice, this list of conditions and the following disclaimer in the
+  ~       documentation and/or other materials provided with the distribution.
+  ~     * Neither the name of The University of Queensland nor the
+  ~       names of its contributors may be used to endorse or promote products
+  ~       derived from this software without specific prior written permission.
+  ~
+  ~ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+  ~ ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+  ~ WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+  ~ DISCLAIMED. IN NO EVENT SHALL THE UNIVERSITY OF QUEENSLAND BE LIABLE FOR ANY
+  ~ DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+  ~ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+  ~ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+  ~ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  ~ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+  -->
+
+<html>
+	<head>
+
+		<title>REIfS ECO-INFORMATICS</title>
+
+		<style type="text/css">
+        #loading {
+            position: absolute;
+            left: 45%;
+            top: 40%;
+            padding: 2px;
+            z-index: 20001;
+            height: auto;
+            border: 1px solid #ccc;
+        }
+        #loading a {
+            color: #225588;
+        }
+
+        #loading .loading-indicator {
+            background: white;
+            color: #444;
+            font: bold 13px tahoma, arial, helvetica;
+            padding: 10px;
+            margin: 0;
+            height: auto;
+        }
+
+        #loading-msg {
+            font: normal 10px arial, tahoma, sans-serif;
+        }
+    </style>
+
+
+		<link rel="stylesheet" type="text/css" href="cresis/js/resources/css/ext-all.css"/>
+		<link rel="stylesheet" type="text/css" href="custom-overrides.css"/>
+
+		<div id="loading">
+	    	<div class="loading-indicator">
+	          <img src="cresis/js/resources/images/default/shared/large-loading.gif" width="32" height="32" style="margin-right:8px;float:left;vertical-align:top;"/>REIfS APPLICATION<br/>
+	          <span id="loading-msg">Loading...</span>
+	        </div>
+		</div>
+
+		<script language='javascript' src='cresis/js/adapter/ext/ext-base.js'></script>
+
+    	<!--script language='javascript' src='js/ext-all.js'></script -->
+    	<script language='javascript' src='cresis/js/ext-all-debug.js'></script>
+    	
+    	<!-- Export Grid to Excel -->
+		<script language='javascript' src='cresis/js/ExportGridToExcel.js'></script>
+
+    	<!-- Drag Zoom -->
+		<!-- script language='javascript' src='js/dragzoom.js'></script -->
+		<!-- script language='javascript' src='cresis/js/OpenLayers.js'></script -->
+
+		<!--script language='javascript' src='cresis/com.CRESIS.Cresis.nocache.js'></script -->
+		<script language='javascript' src='cresis/cresis.nocache.js'></script>
+
+		<!--hide loading message-->
+		<script type="text/javascript">Ext.get('loading').fadeOut({remove: true, duration:.25});</script>
+
+	</head>
+
+	<body>
+
+		<!-- OPTIONAL: include this if you want history support -->
+		<iframe src="javascript:''" id="__gwt_historyFrame" style="width:0;height:0;border:0"></iframe>
+
+	</body>
+</html>

@@ -1,0 +1,5 @@
+<?xml version='1.0'?>
+<ecological_processes>
+	<leaf id='coral_bleaching' title="Coral Bleaching" qtip="Coral Bleaching"/>
+	<leaf id='algal_bloom' title="Algal Bloom" qtip="Algal Bloom"/>
+</ecological_processes>

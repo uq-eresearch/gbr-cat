@@ -1,0 +1,2298 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:event="http://maenad.itee.uq.edu.au/metadata/Event#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:physical="http://maenad.itee.uq.edu.au/metadata/Physical#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:abstract="http://maenad.itee.uq.edu.au/metadata/Abstract#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:actor="http://maenad.itee.uq.edu.au/metadata/Actor#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:record="http://maenad.itee.uq.edu.au/metadata/Record#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:spatial="http://maenad.itee.uq.edu.au/metadata/Spatial#"
+    xmlns:context="http://maenad.itee.uq.edu.au/metadata/Context#"
+    xmlns:reifs="http://maenad.itee.uq.edu.au/metadata/REIfS.owl#"
+    xmlns:temporal="http://maenad.itee.uq.edu.au/metadata/Temporal#"
+  xml:base="http://maenad.itee.uq.edu.au/metadata/REIfS.owl">
+  <owl:Ontology rdf:about="">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >'Id: REIfS.owl,v 0.1 2008/11/14 15:36:12 Campbell Allen'</owl:versionInfo>
+  </owl:Ontology>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#uEm-2s-1">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Complex_Derived_Unit"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >uE/m/s</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#Event">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Temporal#Temporal"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Count">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Base_Characterisitc"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Zeu">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Depth"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Par"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Day_and_Night">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Qualifier"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Organism">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Population"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Ecosystem"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Living"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Mean">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Maximum"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Minimum"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Qualifier"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Record#Image">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Record#Visual"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Record#Video"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Record#Derived_Image"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Knots">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Complex_Derived_Unit"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >kn</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#mg_per_m3">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >mg / m³</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Complex_Derived_Unit"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Temporal#Instance">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Temporal#Interval"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Temporal#DateTime"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Population_Density">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Density"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Volume">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Derived_Characteristic"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Area"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Record#Visual">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Record#Record"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Temperature">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Base_Characterisitc"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Night">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Qualifier"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Percent">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >%</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Complex_Derived_Unit"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Air">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Environment"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Bleaching_Level">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Concentration"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Bleached_Coral">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Bleached"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Coral"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Population">
+    <owl:disjointWith rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Organism"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Ecosystem"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Living"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Fresh_Water">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Sea_Water"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Water"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Speed">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Complex_Derived_Characterisitc"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Area_Per_Quadrat">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Area"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Length">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Base_Characterisitc"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Soft_Coral">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Coral"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#Organism_Sighting">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#Observation"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#hPa">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Complex_Derived_Unit"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >hPa</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Record#Derived_Image">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Record#Visual"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Record#Video"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://maenad.itee.uq.edu.au/metadata/Record#Image"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Air_Temperature">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Temperature"/>
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Air"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Bleached_Reef">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Bleached"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Reef"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Sea_Water">
+    <owl:disjointWith rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Fresh_Water"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Water"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#NTU">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Complex_Derived_Unit"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >NTU</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Day">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Qualifier"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#km2">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Derived_Unit"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >km²</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Concentration">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Complex_Derived_Characterisitc"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Brightness">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Concentration"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Ecosystem">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Living"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Organism"/>
+    <owl:disjointWith rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Population"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Environment">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Non_Living"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Tool"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Base_Unit">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Unit"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Height">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Length"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Tool">
+    <owl:disjointWith rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Environment"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Non_Living"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#m2">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >m²</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Derived_Unit"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#PSU">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >PSU</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Complex_Derived_Unit"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Dead_Coral">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Dead"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Coral"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#ph">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Concentration"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Unit">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Abstract"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Area">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Derived_Characteristic"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Volume"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Wind_Direction">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Direction"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Air"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Wind_Speed">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Speed"/>
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Air"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Software">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Tool"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Actor#Person">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Actor#Actor"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Actor#Machine"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Actor#Process"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Qualifier">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Abstract"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Actor#Process">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Actor#Actor"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Actor#Machine"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://maenad.itee.uq.edu.au/metadata/Actor#Person"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Humidity">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Concentration"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#Box">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#Point"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#Location"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#Location">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#Spatial"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Rain_Fall">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Amount"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Rain"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#hour">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Base_Unit"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >h</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Reef">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Ecosystem"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#ml">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ml</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Base_Unit"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Amount">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Base_Characterisitc"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Direction">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Base_Characterisitc"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#cm2">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Derived_Unit"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >cm²</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Temporal#DateTime">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Temporal#Temporal"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Bird">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Fauna"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Coral"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Sponge"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Coral">
+    <owl:disjointWith rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Bird"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Sponge"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Fauna"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Complex_Derived_Unit">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Unit"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Depth">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Length"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Visibility">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Concentration"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Saturation">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Concentration"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Entity"/>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Actor#Actor">
+    <rdfs:subClassOf rdf:resource="#Entity"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Characteristic">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Abstract"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Non_Living">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Physical"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Base_Characterisitc">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Characteristic"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Dead">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Qualifier"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Bleached"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#AIMS_Bleaching_Level">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >AIMS Bleaching Level Unit</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Base_Unit"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#Trajectory">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#Spatial"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Minimum">
+    <owl:disjointWith rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Mean"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Maximum"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Qualifier"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Island">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Ecosystem"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Tide">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Height"/>
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Sea_Water"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#Algal_Bloom">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#Coral_Bleaching"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#Ecological_Process"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Sponge">
+    <owl:disjointWith rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Coral"/>
+    <owl:disjointWith rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Bird"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Fauna"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Intensity">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Saturation"/>
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Brightness"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Air_Humidity">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Humidity"/>
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Air"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Weight">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Mass"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#kmh">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >km/h</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Complex_Derived_Unit"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Research">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Program"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Education"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Pressure">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Complex_Derived_Characterisitc"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Degrees_Celcius">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Base_Unit"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >°C</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Record#Video">
+    <owl:disjointWith rdf:resource="http://maenad.itee.uq.edu.au/metadata/Record#Image"/>
+    <owl:disjointWith rdf:resource="http://maenad.itee.uq.edu.au/metadata/Record#Derived_Image"/>
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Record#Visual"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Par">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Concentration"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Sunlight"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Record#Audio">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Record#Record"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#m">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Base_Unit"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >m</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Sea_Surface_Temperature">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Sea_Water"/>
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Temperature"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#Environment_Sighting">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#Observation"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Sensor">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Tool"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Individual">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Individual</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Base_Unit"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Coral_Watch_Intensity">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Coral Watch Intensity Unit</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Complex_Derived_Unit"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Context#Context">
+    <rdfs:subClassOf rdf:resource="#Entity"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#Observation">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Event#Event"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Complex_Derived_Characterisitc">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Characteristic"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Light">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Dark"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Qualifier"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#Measurement">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Event#Event"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Record#Record">
+    <rdfs:subClassOf rdf:resource="#Entity"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Coral_Recruit">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Coral"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Temporal#Interval">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Temporal#DateTime"/>
+    <owl:disjointWith rdf:resource="http://maenad.itee.uq.edu.au/metadata/Temporal#Instance"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Rain">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Fresh_Water"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#Polygon">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4</owl:minCardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#has_point"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Spatial#Location"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Polygon must be closed, therefore first and last points must be the same.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Physical">
+    <rdfs:subClassOf rdf:resource="#Entity"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat">
+    <owl:disjointWith rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Sensor"/>
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Tool"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#cm">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Base_Unit"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >cm</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Growth">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Base_Characterisitc"/>
+  </owl:Class>
+  <owl:Class>
+    <owl:unionOf rdf:parseType="Collection">
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Actor#Actor"/>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Tool"/>
+    </owl:unionOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Turbidity">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Concentration"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Salinity">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Concentration"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Bleached">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Qualifier"/>
+    <owl:disjointWith rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Dead"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Hue">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Base_Characterisitc"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#Replicate_Transect">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#Transect"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#Coral_Bleaching">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#Ecological_Process"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="http://maenad.itee.uq.edu.au/metadata/Event#Algal_Bloom"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#Data_Workflow">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Event#Event"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Colour">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Colour</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Base_Unit"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Sea_Water_Temperature">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Temperature"/>
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Sea_Water"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Density">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Concentration"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Flora">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Algae"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Fauna"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Organism"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Maximum">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Qualifier"/>
+    <owl:disjointWith rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Mean"/>
+    <owl:disjointWith rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Minimum"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Air_Pressure">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Air"/>
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Pressure"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#Point">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Spatial#Location"/>
+    <owl:disjointWith rdf:resource="http://maenad.itee.uq.edu.au/metadata/Spatial#Box"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#Ecological_Process">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Event#Event"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Mass">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Base_Characterisitc"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Actor#Machine">
+    <owl:disjointWith rdf:resource="http://maenad.itee.uq.edu.au/metadata/Actor#Person"/>
+    <owl:disjointWith rdf:resource="http://maenad.itee.uq.edu.au/metadata/Actor#Process"/>
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Actor#Actor"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Coral_Watch_Hue">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Base_Unit"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Coral Watch Hue Unit</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Degree">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >°</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Base_Unit"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#km">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >km</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Base_Unit"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Temporal#Temporal">
+    <rdfs:subClassOf rdf:resource="#Entity"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Abstract">
+    <rdfs:subClassOf rdf:resource="#Entity"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Derived_Unit">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Unit"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Living">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Physical"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Bare_Substrate">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Environment"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Chlor_a">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Concentration"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Chlorophyll"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#Spatial">
+    <rdfs:subClassOf rdf:resource="#Entity"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Algae">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Fauna"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Flora"/>
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Organism"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#pH">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Complex_Derived_Unit"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >pH</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Record#Satellite_Image">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Record#Derived_Image"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Water">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Environment"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Sunlight">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Environment"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Earth">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Living"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Air_Visibility">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Visibility"/>
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Air"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#Transect">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Spatial#Spatial"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Sand">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Environment"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Program">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Abstract"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Education">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Program"/>
+    <owl:disjointWith rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Research"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Derived_Characteristic">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Characteristic"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Dark">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Qualifier"/>
+    <owl:disjointWith rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Light"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Fauna">
+    <owl:disjointWith rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Algae"/>
+    <owl:disjointWith rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Flora"/>
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Organism"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#mg">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Base_Unit"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >mg</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Chlorophyll">
+    <rdfs:subClassOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Environment"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#has_point">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#Trajectory"/>
+          <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#Polygon"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://maenad.itee.uq.edu.au/metadata/Spatial#Point"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#has_previous">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Spatial#Point"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Used to link points together in a trajectory</rdfs:comment>
+    <rdfs:range rdf:resource="http://maenad.itee.uq.edu.au/metadata/Spatial#Point"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#has_next">
+    <rdfs:range rdf:resource="http://maenad.itee.uq.edu.au/metadata/Spatial#Point"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Used to link points together in a trajectory</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Spatial#Point"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#has_tool">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Tool"/>
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Event#Measurement"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#has_actor">
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Actor#Actor"/>
+          <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Sensor"/>
+          <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Software"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#Observation"/>
+          <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#Data_Workflow"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#measures_characteristic">
+    <rdfs:range>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Environment"/>
+              <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Water"/>
+              <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Air"/>
+            </owl:unionOf>
+          </owl:Class>
+          <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Characteristic"/>
+        </owl:intersectionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Sensor"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#has_image">
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Event#Observation"/>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Record#Image"/>
+          <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Record#Derived_Image"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#has_measurement">
+    <rdfs:range rdf:resource="http://maenad.itee.uq.edu.au/metadata/Event#Measurement"/>
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Event#Observation"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#has_quadrats">
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Spatial#Replicate_Transect"/>
+    <rdfs:range rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#has_actor">
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Program"/>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Actor#Person"/>
+          <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Sensor"/>
+          <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Software"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+  </owl:ObjectProperty>
+  <rdf:Property rdf:ID="ObjectProperty_2">
+    <rdfs:range rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Program"/>
+  </rdf:Property>
+  <owl:DatatypeProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#has_group">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Program"/>
+          <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Actor#Actor"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Record#has_length">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Record#Audio"/>
+          <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Record#Video"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Actor#has_email">
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Actor#Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#has_species">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Event#Organism_Sighting"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Version">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Software"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Record#has_sample_rate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Record#Audio"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#has_count">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Event#Organism_Sighting"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Record#has_dimensions">
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Record#Visual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#has_morphology">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Event#Organism_Sighting"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Record#has_creationTime">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Record#Record"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Record#is_digital">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Record#Image"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Temporal#has_datetime">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Temporal#Instance"/>
+          <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Temporal#Interval"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#has_disclaimer">
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Program"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#has_genus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Event#Organism_Sighting"/>
+  </owl:DatatypeProperty>
+  <owl:SymmetricProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#linked_to">
+    <rdfs:range rdf:resource="http://maenad.itee.uq.edu.au/metadata/Event#Measurement"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Event#Measurement"/>
+    <owl:inverseOf rdf:resource="http://maenad.itee.uq.edu.au/metadata/Event#linked_to"/>
+  </owl:SymmetricProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#has_end_latitude">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Spatial#Box"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#has_calibration_settings">
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Sensor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#has_name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Tool"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#has_dimensions">
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#has_depth_description">
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Spatial#Point"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Guillermo Transects are at locations which have a deep / shallow description with 5m / 1.5m respectively.  JC has similar but no figures for the depths.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#has_depth">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Spatial#Point"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#has_precision">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Event#Measurement"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Record#has_url">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Record#Record"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#has_description">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Tool"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Context#has_datetime">
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Context#Context"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="http://maenad.itee.uq.edu.au/metadata/Temporal#DateTime"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#has_length">
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Spatial#Transect"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#has_latitude">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#Point"/>
+          <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#Box"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#has_severity">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Event#Ecological_Process"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#has_description">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Characteristic"/>
+          <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Environment"/>
+          <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Living"/>
+          <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Unit"/>
+          <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Qualifier"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#has_characteristic">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Characteristic"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#has_health">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Event#Organism_Sighting"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#is_part_of_ecological_process">
+    <rdfs:range rdf:resource="http://maenad.itee.uq.edu.au/metadata/Event#Ecological_Process"/>
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Event#Observation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Actor#has_name">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Actor#Actor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#has_width">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Spatial#Transect"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#has_region_name">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#Box"/>
+          <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#Point"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#output_of">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Event#Observation"/>
+    <rdfs:range rdf:resource="http://maenad.itee.uq.edu.au/metadata/Event#Data_Workflow"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#has_characteristic">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Characteristic"/>
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Event#Measurement"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#of_target">
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Event#Observation"/>
+    <rdfs:range rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Physical"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#has_number">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#has_type">
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Sensor"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#has_transect_number">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Spatial#Point"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Temporal#has_end_datetime">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Temporal#Interval"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#has_name">
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Spatial#Location"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#has_value">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Event#Measurement"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#has_qualifier">
+    <rdfs:range rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Qualifier"/>
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Event#Measurement"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#has_model_number">
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Tool"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#has_input">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Event#Data_Workflow"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#has_transect">
+    <rdfs:range rdf:resource="http://maenad.itee.uq.edu.au/metadata/Spatial#Replicate_Transect"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Spatial#Point"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Context#has_location">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="http://maenad.itee.uq.edu.au/metadata/Spatial#Spatial"/>
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Context#Context"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#has_output_product">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#Measurement"/>
+          <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#Observation"/>
+          <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Record#Record"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Event#Data_Workflow"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#has_url">
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Program"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#has_unit">
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Event#Measurement"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Unit"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#has_end_longitude">
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Spatial#Box"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#has_research_program">
+    <rdfs:range rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Program"/>
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Event#Observation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#has_precision">
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Sensor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#has_manufacturer">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The manufacturer of the tool.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Tool"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#has_longitude">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#Point"/>
+          <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#Box"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#has_methodology">
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Abstract#Program"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#has_platform">
+    <rdfs:domain rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Sensor"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The platform that a sensor is attached to; e.g. Satellite, Ship, Remote Weather Station.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#has_context">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#Observation"/>
+          <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#Ecological_Process"/>
+          <owl:Class rdf:about="http://maenad.itee.uq.edu.au/metadata/Record#Record"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://maenad.itee.uq.edu.au/metadata/Context#Context"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <physical:Chlor_a rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Chlor_a_Instance">
+    <abstract:has_characteristic rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Concentration</abstract:has_characteristic>
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Chlor_a</abstract:has_description>
+  </physical:Chlor_a>
+  <physical:Bare_Substrate rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Bare_Substrate_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bare Substrate</abstract:has_description>
+  </physical:Bare_Substrate>
+  <abstract:Maximum rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Maximum_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Maximum</abstract:has_description>
+  </abstract:Maximum>
+  <physical:Tool rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Colour_Reference_Card">
+    <physical:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Colour Reference Card used in the Coral Watch bleaching montoring program.</physical:has_description>
+    <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Coral Watch Colour Reference Card</actor:has_name>
+    <physical:has_manufacturer rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Coral Watch</physical:has_manufacturer>
+    <physical:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Coral Watch Colour Card</physical:has_name>
+  </physical:Tool>
+  <abstract:Coral_Watch_Hue rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Coral_Watch_Hue_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Coral Watch Hue</abstract:has_description>
+  </abstract:Coral_Watch_Hue>
+  <physical:Air rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Air_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Air</abstract:has_description>
+  </physical:Air>
+  <physical:Sea_Surface_Temperature rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Sea_Surface_Temperature_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Sea Surface Temperature</abstract:has_description>
+    <abstract:has_characteristic rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Temperature</abstract:has_characteristic>
+    <physical:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Sea Surface Temperature</physical:has_description>
+    <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Sea Surface Temperature</actor:has_name>
+  </physical:Sea_Surface_Temperature>
+  <abstract:Minimum rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Minimum_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Minimum</abstract:has_description>
+  </abstract:Minimum>
+  <abstract:Night rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Night_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >N</abstract:has_description>
+  </abstract:Night>
+  <abstract:Day rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Day_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >D</abstract:has_description>
+  </abstract:Day>
+  <abstract:Research rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#CMS_Coral_Bleaching_Research">
+    <abstract:has_group xml:lang="en">CMS Coral Bleaching Survey</abstract:has_group>
+    <abstract:has_actor>
+      <actor:Person rdf:about="http://maenad.itee.uq.edu.au/metadata/Actor#CMS_Bleaching_Survey_Team">
+        <actor:has_email xml:lang="en"></actor:has_email>
+        <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >CMS Bleaching Survey Team</actor:has_name>
+        <abstract:has_group xml:lang="en">CMS Coral Belaching Survey</abstract:has_group>
+      </actor:Person>
+    </abstract:has_actor>
+  </abstract:Research>
+  <abstract:Dark rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Dark_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Dark</abstract:has_description>
+  </abstract:Dark>
+  <abstract:Percent rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Percent_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >%</abstract:has_description>
+  </abstract:Percent>
+  <abstract:cm rdf:ID="cm_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >cm</abstract:has_description>
+  </abstract:cm>
+  <abstract:Area_Per_Quadrat rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Area_Per_Quadrat_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Area per Quadrat</abstract:has_description>
+    <abstract:has_characteristic rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Area</abstract:has_characteristic>
+  </abstract:Area_Per_Quadrat>
+  <abstract:Research rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#AIMS_Coral_Bleaching_Research">
+    <abstract:has_group xml:lang="en">Aims Belaching Survey</abstract:has_group>
+    <abstract:has_actor>
+      <actor:Person rdf:about="http://maenad.itee.uq.edu.au/metadata/Actor#Ray_Berkelmans">
+        <abstract:has_group xml:lang="en">Aims Belaching Survey</abstract:has_group>
+        <actor:has_email xml:lang="en">r.berkelmans@aims.gov.au</actor:has_email>
+        <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Ray Berkelmans</actor:has_name>
+      </actor:Person>
+    </abstract:has_actor>
+  </abstract:Research>
+  <abstract:Knots rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Knots_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >kn</abstract:has_description>
+  </abstract:Knots>
+  <abstract:Colour rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Colour_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Colour</abstract:has_description>
+  </abstract:Colour>
+  <spatial:Replicate_Transect rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#Transect_4x4">
+    <spatial:has_quadrats>
+      <physical:Quadrat rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_13">
+        <physical:has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >1m x 1m</physical:has_dimensions>
+        <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Algae Sampling Quadrat</actor:has_name>
+        <physical:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Quadrat</physical:has_name>
+        <physical:has_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >13</physical:has_number>
+      </physical:Quadrat>
+    </spatial:has_quadrats>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Transect used in Juan Carlos Ortiz's coral surveys - 16 1x1m quadrates arranged to a 4x4 grid</rdfs:comment>
+    <spatial:has_quadrats>
+      <physical:Quadrat rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_12">
+        <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Algae Sampling Quadrat</actor:has_name>
+        <physical:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Quadrat</physical:has_name>
+        <physical:has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >1m x 1m</physical:has_dimensions>
+        <physical:has_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >12</physical:has_number>
+      </physical:Quadrat>
+    </spatial:has_quadrats>
+    <spatial:has_width rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >4m</spatial:has_width>
+    <spatial:has_quadrats>
+      <physical:Quadrat rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_3">
+        <physical:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Quadrat</physical:has_name>
+        <physical:has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >1m x 1m</physical:has_dimensions>
+        <physical:has_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >3</physical:has_number>
+        <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Algae Sampling Quadrat</actor:has_name>
+      </physical:Quadrat>
+    </spatial:has_quadrats>
+    <spatial:has_quadrats>
+      <physical:Quadrat rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_8">
+        <physical:has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >1m x 1m</physical:has_dimensions>
+        <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Algae Sampling Quadrat</actor:has_name>
+        <physical:has_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >8</physical:has_number>
+        <physical:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Quadrat</physical:has_name>
+      </physical:Quadrat>
+    </spatial:has_quadrats>
+    <spatial:has_quadrats>
+      <physical:Quadrat rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_9">
+        <physical:has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >1m x 1m</physical:has_dimensions>
+        <physical:has_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >9</physical:has_number>
+        <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Algae Sampling Quadrat</actor:has_name>
+        <physical:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Quadrat</physical:has_name>
+      </physical:Quadrat>
+    </spatial:has_quadrats>
+    <spatial:has_quadrats>
+      <physical:Quadrat rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_1">
+        <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Algae Sampling Quadrat</actor:has_name>
+        <physical:has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >1m x 1m</physical:has_dimensions>
+        <physical:has_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</physical:has_number>
+        <physical:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Quadrat</physical:has_name>
+      </physical:Quadrat>
+    </spatial:has_quadrats>
+    <spatial:has_quadrats>
+      <physical:Quadrat rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_15">
+        <physical:has_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >15</physical:has_number>
+        <physical:has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >1m x 1m</physical:has_dimensions>
+        <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Algae Sampling Quadrat</actor:has_name>
+        <physical:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Quadrat</physical:has_name>
+      </physical:Quadrat>
+    </spatial:has_quadrats>
+    <spatial:has_quadrats>
+      <physical:Quadrat rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_4">
+        <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Algae Sampling Quadrat</actor:has_name>
+        <physical:has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >1m x 1m</physical:has_dimensions>
+        <physical:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Quadrat</physical:has_name>
+        <physical:has_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4</physical:has_number>
+      </physical:Quadrat>
+    </spatial:has_quadrats>
+    <spatial:has_quadrats>
+      <physical:Quadrat rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_5">
+        <physical:has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >1m x 1m</physical:has_dimensions>
+        <physical:has_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >5</physical:has_number>
+        <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Algae Sampling Quadrat</actor:has_name>
+        <physical:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Quadrat</physical:has_name>
+      </physical:Quadrat>
+    </spatial:has_quadrats>
+    <spatial:has_quadrats>
+      <physical:Quadrat rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_14">
+        <physical:has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >1m x 1m</physical:has_dimensions>
+        <physical:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Quadrat</physical:has_name>
+        <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Algae Sampling Quadrat</actor:has_name>
+        <physical:has_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >14</physical:has_number>
+      </physical:Quadrat>
+    </spatial:has_quadrats>
+    <spatial:has_length rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >4m</spatial:has_length>
+    <spatial:has_quadrats>
+      <physical:Quadrat rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_2">
+        <physical:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Quadrat</physical:has_name>
+        <physical:has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >1m x 1m</physical:has_dimensions>
+        <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Algae Sampling Quadrat</actor:has_name>
+        <physical:has_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</physical:has_number>
+      </physical:Quadrat>
+    </spatial:has_quadrats>
+    <spatial:has_quadrats>
+      <physical:Quadrat rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_11">
+        <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Algae Sampling Quadrat</actor:has_name>
+        <physical:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Quadrat</physical:has_name>
+        <physical:has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >1m x 1m</physical:has_dimensions>
+        <physical:has_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >11</physical:has_number>
+      </physical:Quadrat>
+    </spatial:has_quadrats>
+    <spatial:has_quadrats>
+      <physical:Quadrat rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_6">
+        <physical:has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >1m x 1m</physical:has_dimensions>
+        <physical:has_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >6</physical:has_number>
+        <physical:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Quadrat</physical:has_name>
+        <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Algae Sampling Quadrat</actor:has_name>
+      </physical:Quadrat>
+    </spatial:has_quadrats>
+    <spatial:has_quadrats>
+      <physical:Quadrat rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_10">
+        <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Algae Sampling Quadrat</actor:has_name>
+        <physical:has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >1m x 1m</physical:has_dimensions>
+        <physical:has_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >10</physical:has_number>
+        <physical:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Quadrat</physical:has_name>
+      </physical:Quadrat>
+    </spatial:has_quadrats>
+    <spatial:has_quadrats>
+      <physical:Quadrat rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_7">
+        <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Algae Sampling Quadrat</actor:has_name>
+        <physical:has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >1m x 1m</physical:has_dimensions>
+        <physical:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Quadrat</physical:has_name>
+        <physical:has_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >7</physical:has_number>
+      </physical:Quadrat>
+    </spatial:has_quadrats>
+    <spatial:has_quadrats>
+      <physical:Quadrat rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_16">
+        <physical:has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >1m x 1m</physical:has_dimensions>
+        <physical:has_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >16</physical:has_number>
+        <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Algae Sampling Quadrat</actor:has_name>
+        <physical:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Quadrat</physical:has_name>
+      </physical:Quadrat>
+    </spatial:has_quadrats>
+  </spatial:Replicate_Transect>
+  <abstract:Area rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Area_Instance">
+    <abstract:has_characteristic rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Area</abstract:has_characteristic>
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Area</abstract:has_description>
+  </abstract:Area>
+  <abstract:Research rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#CMS_Coral_Research">
+    <abstract:has_group xml:lang="en">CMS Coral Research</abstract:has_group>
+    <abstract:has_url rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >www.cms.uq.edu.au</abstract:has_url>
+    <abstract:has_disclaimer rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Acknowledgment: The following organisation has contributed to these data, the Centre for Marine Studies, University of Queensland and must be acknowledged in any formal communication or publication:  Permissions: These data may be used free of charge in not-for-profit applications. Any other users should contact the Institute for permissions. The above acknowledgements must be used in formal communication or publications.  Indemnity: Whilst every care has been taken to ensure the data are of high quality, no guarantees are provided on the accuracy of the data and no liability is accepted for any loss, damage or injury resulting from the use of these data.</abstract:has_disclaimer>
+    <abstract:has_methodology rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Follows a set  transects at the site and samples coral colong size and growth rates over time</abstract:has_methodology>
+    <abstract:has_actor>
+      <actor:Person rdf:about="http://maenad.itee.uq.edu.au/metadata/Actor#Juan_Carlos_Ortiz">
+        <abstract:has_group xml:lang="en">CMS Coral Research</abstract:has_group>
+        <actor:has_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >j.ortiz@uq.edu.au</actor:has_email>
+        <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Juan Carlos Ortiz</actor:has_name>
+      </actor:Person>
+    </abstract:has_actor>
+  </abstract:Research>
+  <abstract:Light rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Light_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Light</abstract:has_description>
+  </abstract:Light>
+  <physical:Zeu rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Zeu_Instance">
+    <physical:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Zeu</physical:has_description>
+    <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Zeu</actor:has_name>
+    <abstract:has_characteristic rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Depth</abstract:has_characteristic>
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Zeu</abstract:has_description>
+  </physical:Zeu>
+  <physical:Environment rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Environment_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Environment</abstract:has_description>
+  </physical:Environment>
+  <abstract:cm2 rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#cm2_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >cm²</abstract:has_description>
+  </abstract:cm2>
+  <physical:Sea_Water rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Sea_Water_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Sea Water</abstract:has_description>
+  </physical:Sea_Water>
+  <abstract:km rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#km_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >km</abstract:has_description>
+  </abstract:km>
+  <abstract:Day_and_Night rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Day_and_Night_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >D+N</abstract:has_description>
+  </abstract:Day_and_Night>
+  <spatial:Replicate_Transect rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#Transect_15x1">
+    <spatial:has_quadrats rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_14"/>
+    <spatial:has_quadrats rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_5"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Transect used in Juan Carlos Ortiz's coral surveys</rdfs:comment>
+    <spatial:has_quadrats rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_15"/>
+    <spatial:has_quadrats rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_6"/>
+    <spatial:has_quadrats rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_10"/>
+    <spatial:has_quadrats rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_11"/>
+    <spatial:has_quadrats rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_1"/>
+    <spatial:has_quadrats rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_7"/>
+    <spatial:has_quadrats rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_2"/>
+    <spatial:has_quadrats rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_8"/>
+    <spatial:has_quadrats rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_12"/>
+    <spatial:has_quadrats rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_3"/>
+    <spatial:has_quadrats rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_13"/>
+    <spatial:has_quadrats rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_4"/>
+    <spatial:has_quadrats rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_9"/>
+    <spatial:has_length rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >15m</spatial:has_length>
+    <spatial:has_width rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1m</spatial:has_width>
+  </spatial:Replicate_Transect>
+  <abstract:Research rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#CMS_Algae_Research">
+    <abstract:has_actor>
+      <actor:Person rdf:about="http://maenad.itee.uq.edu.au/metadata/Actor#Guillermo_Diaz">
+        <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Guillermo Diaz</actor:has_name>
+        <abstract:has_group xml:lang="en">CMS Alga Research</abstract:has_group>
+        <actor:has_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >g.diazpulido@uq.edu.au</actor:has_email>
+      </actor:Person>
+    </abstract:has_actor>
+    <abstract:has_methodology rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Follows a random transect at the site and samples algae and substrate</abstract:has_methodology>
+    <abstract:has_disclaimer rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Acknowledgment: The following organisation has contributed to these data, the Centre for Marine Studies, University of Queensland and must be acknowledged in any formal communication or publication:  Permissions: These data may be used free of charge in not-for-profit applications. Any other users should contact the Institute for permissions. The above acknowledgements must be used in formal communication or publications.  Indemnity: Whilst every care has been taken to ensure the data are of high quality, no guarantees are provided on the accuracy of the data and no liability is accepted for any loss, damage or injury resulting from the use of these data.</abstract:has_disclaimer>
+    <abstract:has_url rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >www.cms.uq.edu.au</abstract:has_url>
+    <abstract:has_group xml:lang="en">CMS Alga Research</abstract:has_group>
+  </abstract:Research>
+  <abstract:km2 rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#km2_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >km²</abstract:has_description>
+  </abstract:km2>
+  <abstract:ph rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#ph_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ph</abstract:has_description>
+    <abstract:has_characteristic rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ph</abstract:has_characteristic>
+  </abstract:ph>
+  <physical:Sensor rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Thermometer">
+    <physical:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Thermometer</physical:has_name>
+    <physical:has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Thermometer</physical:has_type>
+    <physical:measures_characteristic>
+      <physical:Air_Temperature rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Air_Temperature_Instance">
+        <abstract:has_characteristic rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Temperature</abstract:has_characteristic>
+        <physical:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Air Temperature</physical:has_description>
+        <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Air Temperature</abstract:has_description>
+        <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Air Temperature</actor:has_name>
+      </physical:Air_Temperature>
+    </physical:measures_characteristic>
+  </physical:Sensor>
+  <abstract:ml rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#ml_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ml</abstract:has_description>
+  </abstract:ml>
+  <abstract:Degrees_Celcius rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Degrees_Celcius_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >°C</abstract:has_description>
+  </abstract:Degrees_Celcius>
+  <abstract:mg_per_m3 rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#mg_per_m3_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >mg / m³</abstract:has_description>
+  </abstract:mg_per_m3>
+  <abstract:Research rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#HIRS_Station">
+    <abstract:has_actor>
+      <physical:Sensor rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Tide_Gauge_HIRS">
+        <physical:measures_characteristic>
+          <physical:Tide rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Tide_Instance">
+            <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Tide</abstract:has_description>
+            <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Tide</actor:has_name>
+            <physical:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Tide</physical:has_description>
+            <abstract:has_characteristic rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Height</abstract:has_characteristic>
+          </physical:Tide>
+        </physical:measures_characteristic>
+        <physical:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Tide Gauge HIRS</physical:has_name>
+        <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Tide Gauge</actor:has_name>
+        <physical:has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Tide Gauge</physical:has_type>
+      </physical:Sensor>
+    </abstract:has_actor>
+    <abstract:has_actor>
+      <actor:Person rdf:about="http://maenad.itee.uq.edu.au/metadata/Actor#HIRS_Staff">
+        <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >HIRS Staff</actor:has_name>
+        <actor:has_email xml:lang="en">hirs@uq.edu.au</actor:has_email>
+        <abstract:has_group xml:lang="en">HIRS Research Station</abstract:has_group>
+      </actor:Person>
+    </abstract:has_actor>
+    <abstract:has_actor>
+      <physical:Sensor rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Rain_Gauge_HIRS">
+        <physical:measures_characteristic>
+          <physical:Rain_Fall rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Rain_Fall_Instance">
+            <abstract:has_characteristic rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Amount</abstract:has_characteristic>
+            <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Rain Fall</abstract:has_description>
+            <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Rain Fall</actor:has_name>
+            <physical:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Rain Fall</physical:has_description>
+          </physical:Rain_Fall>
+        </physical:measures_characteristic>
+        <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Rain Gauge</actor:has_name>
+        <physical:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Rain Gauge HIRS</physical:has_name>
+        <physical:has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Rain Gauge</physical:has_type>
+      </physical:Sensor>
+    </abstract:has_actor>
+    <abstract:has_disclaimer rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Acknowledgment: The following organisation has contributed to these data, the Centre for Marine Studies, University of Queensland and must be acknowledged in any formal communication or publication:  Permissions: These data may be used free of charge in not-for-profit applications. Any other users should contact the Institute for permissions. The above acknowledgements must be used in formal communication or publications.  Indemnity: Whilst every care has been taken to ensure the data are of high quality, no guarantees are provided on the accuracy of the data and no liability is accepted for any loss, damage or injury resulting from the use of these data.</abstract:has_disclaimer>
+    <abstract:has_actor>
+      <physical:Sensor rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Mercury_Thermometer_HIRS">
+        <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Mercury Thermometer</actor:has_name>
+        <physical:measures_characteristic>
+          <physical:Sea_Water_Temperature rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Sea_Water_Temperature_Instance">
+            <physical:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Sea Water Temperature</physical:has_description>
+            <abstract:has_characteristic rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Temperature</abstract:has_characteristic>
+            <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Sea Water Temperature</actor:has_name>
+            <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Sea Water Temperature</abstract:has_description>
+          </physical:Sea_Water_Temperature>
+        </physical:measures_characteristic>
+        <physical:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Mercury Thermometer HIRS</physical:has_name>
+        <physical:has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Mercury Thermometer</physical:has_type>
+      </physical:Sensor>
+    </abstract:has_actor>
+    <abstract:has_actor>
+      <physical:Sensor rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Barometer_HIRS">
+        <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Barometer</actor:has_name>
+        <physical:measures_characteristic>
+          <physical:Air_Pressure rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Air_Pressure_Instance">
+            <abstract:has_characteristic rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Pressure</abstract:has_characteristic>
+            <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Air Pressure</abstract:has_description>
+          </physical:Air_Pressure>
+        </physical:measures_characteristic>
+        <physical:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Barometer HIRS</physical:has_name>
+        <physical:has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Barometer</physical:has_type>
+      </physical:Sensor>
+    </abstract:has_actor>
+    <abstract:has_url rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >www.marine.uq.edu.au/hirs</abstract:has_url>
+    <abstract:has_methodology rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >HIRS Staff check on sea temperature, tide and air visibility at 9am each morning.</abstract:has_methodology>
+    <abstract:has_group xml:lang="en">HIRS Research Station</abstract:has_group>
+    <abstract:has_actor>
+      <physical:Sensor rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Wet_Dry_Bulb_HIRS">
+        <physical:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Wet Dry Bulb HIRS</physical:has_name>
+        <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Wet Dry Bulb</actor:has_name>
+        <physical:measures_characteristic>
+          <physical:Air_Humidity rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Air_Humidity_Instance">
+            <abstract:has_characteristic rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Humidity</abstract:has_characteristic>
+            <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Air Humidity</abstract:has_description>
+          </physical:Air_Humidity>
+        </physical:measures_characteristic>
+        <physical:measures_characteristic rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Air_Temperature_Instance"/>
+        <physical:has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Wet &amp; Dry Bulb</physical:has_type>
+      </physical:Sensor>
+    </abstract:has_actor>
+    <abstract:has_actor>
+      <physical:Sensor rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Anemometer_HIRS">
+        <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Anemometer</actor:has_name>
+        <physical:measures_characteristic>
+          <physical:Wind_Direction rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Wind_Direction_Instance">
+            <abstract:has_characteristic rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Direction</abstract:has_characteristic>
+            <physical:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Wind Direction</physical:has_description>
+            <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Wind Direction</abstract:has_description>
+            <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Wind Direction</actor:has_name>
+          </physical:Wind_Direction>
+        </physical:measures_characteristic>
+        <physical:measures_characteristic>
+          <physical:Wind_Speed rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Wind_Speed_Instance">
+            <abstract:has_characteristic rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Speed</abstract:has_characteristic>
+            <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Wind Speed</abstract:has_description>
+          </physical:Wind_Speed>
+        </physical:measures_characteristic>
+        <physical:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Anemometer HIRS</physical:has_name>
+        <physical:has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Anemometer</physical:has_type>
+      </physical:Sensor>
+    </abstract:has_actor>
+  </abstract:Research>
+  <abstract:Research rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#CMS_Satellite_Research">
+    <abstract:has_actor>
+      <actor:Person rdf:about="http://maenad.itee.uq.edu.au/metadata/Actor#Scarla_Weeks">
+        <actor:has_email xml:lang="en">s.weeks@uq.edu.au</actor:has_email>
+        <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Scarla Weeks</actor:has_name>
+        <abstract:has_group xml:lang="en">CMS Satellite Resarch</abstract:has_group>
+      </actor:Person>
+    </abstract:has_actor>
+    <abstract:has_actor>
+      <physical:Software rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Seadas">
+        <physical:Version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >5.3</physical:Version>
+        <physical:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Seadas</physical:has_name>
+        <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >SeaDAS</actor:has_name>
+        <physical:has_manufacturer rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >NASA OBBPG</physical:has_manufacturer>
+        <physical:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >The SeaWiFS Data Analysis System (SeaDAS) is a comprehensive image analysis package for the processing, display, analysis, and quality control of ocean color data.</physical:has_description>
+      </physical:Software>
+    </abstract:has_actor>
+    <abstract:has_actor>
+      <physical:Sensor rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#MODIS">
+        <physical:has_platform rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >AQUA and TERRA Satellites</physical:has_platform>
+        <physical:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >MODIS</physical:has_name>
+        <physical:has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Light Sensor</physical:has_type>
+        <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >MODIS</actor:has_name>
+      </physical:Sensor>
+    </abstract:has_actor>
+    <abstract:has_url rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >www.cms.uq.edu.au</abstract:has_url>
+    <abstract:has_group xml:lang="en">CMS Satellite Reserach</abstract:has_group>
+  </abstract:Research>
+  <actor:Machine rdf:about="http://maenad.itee.uq.edu.au/metadata/Actor#BOM_Weather_Station">
+    <abstract:has_group xml:lang="en">HIRS Research Station</abstract:has_group>
+    <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >BOM Weather Station</actor:has_name>
+  </actor:Machine>
+  <abstract:mg rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#mg_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >mg</abstract:has_description>
+  </abstract:mg>
+  <event:Coral_Bleaching rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#Coral_Bleaching_1998">
+    <event:has_context>
+      <context:Context rdf:about="http://maenad.itee.uq.edu.au/metadata/Context#GBR_Bleaching_Context_1998">
+        <context:has_location>
+          <spatial:Box rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#GBR_ROI">
+            <spatial:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >GBR Area of Interest</spatial:has_name>
+            <spatial:has_end_latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+            >-25.0</spatial:has_end_latitude>
+            <spatial:has_longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+            >148.5</spatial:has_longitude>
+            <spatial:has_end_longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+            >154.0</spatial:has_end_longitude>
+            <spatial:has_latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+            >-20.0</spatial:has_latitude>
+            <spatial:has_region_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >GBR</spatial:has_region_name>
+          </spatial:Box>
+        </context:has_location>
+        <context:has_datetime>
+          <temporal:Interval rdf:about="http://maenad.itee.uq.edu.au/metadata/Temporal#GBR_Bleaching_Interval_1998">
+            <temporal:has_end_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+            >1998-03-31T23:59:59</temporal:has_end_datetime>
+            <temporal:has_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+            >1997-11-01T00:00:01</temporal:has_datetime>
+          </temporal:Interval>
+        </context:has_datetime>
+      </context:Context>
+    </event:has_context>
+    <event:has_severity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Severe</event:has_severity>
+  </event:Coral_Bleaching>
+  <abstract:Hue rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Hue_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Hue</abstract:has_description>
+    <abstract:has_characteristic rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Hue</abstract:has_characteristic>
+  </abstract:Hue>
+  <physical:Algae rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Algae_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Algae</abstract:has_description>
+  </physical:Algae>
+  <spatial:Box rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#Sat_Data_ROI">
+    <spatial:has_region_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Southern GBR</spatial:has_region_name>
+    <spatial:has_latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >-21.5</spatial:has_latitude>
+    <spatial:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Satellite Data ROI</spatial:has_name>
+    <spatial:has_longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >148.5</spatial:has_longitude>
+    <spatial:has_end_latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >-25.5</spatial:has_end_latitude>
+    <spatial:has_end_longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >154.0</spatial:has_end_longitude>
+  </spatial:Box>
+  <abstract:Growth rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Growth_Instance">
+    <abstract:has_characteristic rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Growth</abstract:has_characteristic>
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Growth</abstract:has_description>
+  </abstract:Growth>
+  <abstract:Degree rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Degree_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >°</abstract:has_description>
+  </abstract:Degree>
+  <physical:Bleached_Reef rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Bleached_Reef_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bleached Reef</abstract:has_description>
+  </physical:Bleached_Reef>
+  <abstract:Mean rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Mean_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Mean</abstract:has_description>
+  </abstract:Mean>
+  <abstract:m rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#m_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >m</abstract:has_description>
+  </abstract:m>
+  <abstract:pH rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#pH_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >pH</abstract:has_description>
+  </abstract:pH>
+  <abstract:Salinity rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Salinity_Instance">
+    <abstract:has_characteristic rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Salinity</abstract:has_characteristic>
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Salinity</abstract:has_description>
+  </abstract:Salinity>
+  <physical:Sponge rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Sponge_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Sponge</abstract:has_description>
+  </physical:Sponge>
+  <abstract:kmh rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#kmh_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >kmh</abstract:has_description>
+  </abstract:kmh>
+  <physical:Sand rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Sand_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Sand</abstract:has_description>
+  </physical:Sand>
+  <physical:Coral rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Coral_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Coral</abstract:has_description>
+  </physical:Coral>
+  <physical:Dead_Coral rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Dead_Coral_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Dead Coral</abstract:has_description>
+  </physical:Dead_Coral>
+  <physical:Bleached_Coral rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Bleached_Coral_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bleached Coral</abstract:has_description>
+  </physical:Bleached_Coral>
+  <abstract:Research rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#BOM_Weather_Research">
+    <abstract:has_group xml:lang="en">Bureau of Meteorology</abstract:has_group>
+    <abstract:has_url rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >www.bom.gov.au</abstract:has_url>
+    <abstract:has_disclaimer rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Disclaimer  You accept all risks and responsibility for losses, damages, costs and other consequences resulting directly or indirectly from using this site and any information or material available from it.  To the maximum permitted by law, the Bureau of Meteorology excludes all liability to any person arising directly or indirectly from using this site and any information or material available from it. Always Check the Information  Information at this site:      * is general information provided as part of the Bureau of Meteorology’s statutory role in the dissemination of information relating to meteorology.     * is subject to the uncertainties of scientific and technical research     * may not be accurate, current or complete     * is subject to change without notice     * is not a substitute for independent professional advice and users should obtain any appropriate professional advice relevant to their particular circumstances     * the material on this web site may include the views or recommendations of third parties, which do not necessarily reflect the views of the Bureau of Meteorology or indicate its commitment to a particular course of action.</abstract:has_disclaimer>
+    <abstract:has_methodology rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >BOM weather station uses various instruments to measure, Air Temp, Wind Direction &amp; Speed, Humidity, Pressure and Rainfall.</abstract:has_methodology>
+  </abstract:Research>
+  <abstract:Research rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#AIMS_Research">
+    <abstract:has_group xml:lang="en">AIMS Research</abstract:has_group>
+    <abstract:has_methodology rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >In Situ water temperature logger and remote weather station data is recorded every half hour.</abstract:has_methodology>
+    <abstract:has_actor>
+      <physical:Sensor rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#HALFTIDE_ROCKS_RWS_AIMS">
+        <physical:has_platform rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >AIMS Remote Weather Station</physical:has_platform>
+        <physical:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Data recorded: Sea Temperature (2.4m and 7.2m at MSL), Barometric Pressure, Air Temperature, Solar Radiation (PAR), Wind Direction True (scalar averaged), Wind Speed True (10 min average prior to every half hour and maximum wind gust). The weather station uses Campbell Scientific Australia equipment.</physical:has_description>
+        <physical:measures_characteristic>
+          <physical:Par rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Par_Instance">
+            <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Par</abstract:has_description>
+            <abstract:has_characteristic rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Concentration</abstract:has_characteristic>
+          </physical:Par>
+        </physical:measures_characteristic>
+        <physical:has_manufacturer rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >AIMS</physical:has_manufacturer>
+        <physical:measures_characteristic rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Wind_Speed_Instance"/>
+        <physical:measures_characteristic rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Wind_Direction_Instance"/>
+        <physical:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >HALFTIDE ROCKS RWS AIMS</physical:has_name>
+        <physical:measures_characteristic rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Sea_Water_Temperature_Instance"/>
+        <physical:measures_characteristic rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Air_Pressure_Instance"/>
+        <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Halftide Rocks Remote Weather Station</actor:has_name>
+        <physical:measures_characteristic rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Air_Temperature_Instance"/>
+        <physical:has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Remote Weather Station</physical:has_type>
+      </physical:Sensor>
+    </abstract:has_actor>
+    <abstract:has_actor>
+      <physical:Sensor rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#CAPE_BOWLING_GREEN_RWS_AIMS">
+        <physical:has_manufacturer rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >AIMS</physical:has_manufacturer>
+        <physical:measures_characteristic rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Air_Pressure_Instance"/>
+        <physical:measures_characteristic rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Air_Temperature_Instance"/>
+        <physical:measures_characteristic rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Par_Instance"/>
+        <physical:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >CAPE BOWLING GREEN RWS AIMS</physical:has_name>
+        <physical:measures_characteristic rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Wind_Direction_Instance"/>
+        <physical:has_platform rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >AIMS Remote Weather Station</physical:has_platform>
+        <physical:measures_characteristic rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Wind_Speed_Instance"/>
+        <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Cape Bowling Green Remote Weather Station</actor:has_name>
+        <physical:has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Remote Weather Station</physical:has_type>
+        <physical:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Data recorded: Barometric Pressure, Air Temperature, Solar Radiation (PAR), Wind Direction True (vector averaged), Wind Speed True (30 min average). The weather station is an AIMS System.</physical:has_description>
+      </physical:Sensor>
+    </abstract:has_actor>
+    <abstract:has_actor>
+      <physical:Sensor rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#HARDY_REEF_RWS_AIMS">
+        <physical:measures_characteristic rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Air_Pressure_Instance"/>
+        <physical:measures_characteristic rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Air_Temperature_Instance"/>
+        <physical:has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Remote Weather Station</physical:has_type>
+        <physical:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >HARDY REEF RWS AIMS</physical:has_name>
+        <physical:has_platform rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >AIMS Remote Weather Station</physical:has_platform>
+        <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Hardy Reef Remote Weather Station</actor:has_name>
+        <physical:measures_characteristic rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Wind_Direction_Instance"/>
+        <physical:measures_characteristic rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Par_Instance"/>
+        <physical:measures_characteristic rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Sea_Water_Temperature_Instance"/>
+        <physical:has_manufacturer rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >AIMS</physical:has_manufacturer>
+        <physical:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Data recorded: Sea Temperature (2.5m and 9m at MSL), Barometric Pressure, Air Temperature, Solar Radiation (PAR), Wind Direction True (vector averaged), Wind Speed True (30 min average). This weather station has been deployed in three different locations on Hardy Reef.&amp;#xD; Location 1: -19.7340S, 149.1808E  from June 1989 to November 1993 Location 2: -19.7358S, 149.1808E from November 1993 to January 1996 Location 3: -19.7473S, 149.1817E from January 1996 to present. The weather station is an AIMS System</physical:has_description>
+        <physical:measures_characteristic rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Wind_Speed_Instance"/>
+      </physical:Sensor>
+    </abstract:has_actor>
+    <abstract:has_actor>
+      <physical:Sensor rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Odyssey_Temperature_Logger_AIMS">
+        <physical:has_manufacturer rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >DATAFLOW Systems Pty Ltd.</physical:has_manufacturer>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Data logger used by AIMS for in situ water temperatures.</rdfs:comment>
+        <physical:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Odyssey Temperature Logger AIMS</physical:has_name>
+        <physical:has_calibration_settings rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Temperature range is between -10 degrees centigrade and +50 degrees centigrade. The temperature resolution is 0.02 degrees centigrade.</physical:has_calibration_settings>
+        <physical:has_precision rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >0.02 degrees centigrade.</physical:has_precision>
+        <physical:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >WATERPROOF RECORDER The Odyssey data recorder is waterproof and submersible to 20 metres.  TEMPERATURE RESOLUTION Temperature range is between -10 degrees centigrade and +50 degrees centigrade. The temperature resolution is 0.02 degrees centigrade.  TEMPERATURE READINGS The Odyssey data recorder records 16350 temperature readings. The interval between readings can be set when the recorder is started at any interval between 10 seconds (8640 readings per day) and 8 hours (3 readings per day).  SIZE The physical size of this system (data recorder and temperature sensor) is 39mm diameter and 160mm long.  BATTERIES The Odyssey data recorder includes two ½ AA Lithium cells spot welded together. The batteries can be purchased from Dataflow Systems.  APPLICATIONS      Water, Soil &amp; Air  SOFTWARE Windows version PC software Odyssey V4.6 Microsoft English and V4.4 Microsoft Chinese. http://www.odysseydatarecording.com/odyssey_productsview.php?key=7</physical:has_description>
+        <physical:has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Temperature Logger</physical:has_type>
+        <physical:has_model_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >ODYTEMP</physical:has_model_number>
+        <actor:has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Odyssey Temperature Logger</actor:has_name>
+        <physical:measures_characteristic rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Sea_Water_Temperature_Instance"/>
+      </physical:Sensor>
+    </abstract:has_actor>
+    <abstract:has_url rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >www.aims.gov.au</abstract:has_url>
+    <abstract:has_disclaimer rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Acknowledgment:  The following organisations have contributed to these data; AIMS, Australian Government, CRC Reef, Ports Corporation of Queensland and must be acknowledged in any formal communication or publication: Permissions: These data may be used free of charge in not-for-profit applications. Any other users should contact the Institute for permissions. The above acknowledgements must be used in formal communication or publications. Indemnity: Whilst every care has been taken to ensure the data are of high quality, no guarantees are provided on the accuracy of the data and no liability is accepted for any loss, damage or injury resulting from the use of these data.</abstract:has_disclaimer>
+  </abstract:Research>
+  <event:Coral_Bleaching rdf:about="http://maenad.itee.uq.edu.au/metadata/Event#Coral_Bleaching_2002">
+    <event:has_context>
+      <context:Context rdf:about="http://maenad.itee.uq.edu.au/metadata/Context#GBR_Bleaching_Context_2002">
+        <context:has_datetime>
+          <temporal:Interval rdf:about="http://maenad.itee.uq.edu.au/metadata/Temporal#GBR_Bleaching_Interval_2002">
+            <temporal:has_end_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+            >2002-03-31T23:59:59</temporal:has_end_datetime>
+            <temporal:has_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+            >2001-11-01T00:00:01</temporal:has_datetime>
+          </temporal:Interval>
+        </context:has_datetime>
+        <context:has_location rdf:resource="http://maenad.itee.uq.edu.au/metadata/Spatial#GBR_ROI"/>
+      </context:Context>
+    </event:has_context>
+    <event:has_severity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Severe</event:has_severity>
+  </event:Coral_Bleaching>
+  <physical:Soft_Coral rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Soft_Coral_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Soft Coral</abstract:has_description>
+  </physical:Soft_Coral>
+  <abstract:Education rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Coral_Watch">
+    <abstract:has_url rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >www.coralwatch.org</abstract:has_url>
+    <abstract:has_group xml:lang="en">Coral Watch</abstract:has_group>
+    <abstract:has_methodology rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The colour charts are based on the actual colours of bleached and healthy corals. Each colour square corresponds to a concentration of symbionts contained in the coral tissue. The concentration of symbionts is directly linked to the health of the coral. All you have to do is match the colour of the coral with one of the colours in the coral health monitoring chart. You then record the matching colour codes, along with coral type (species if possible), on the website data sheet (www.coralwatch.org).</abstract:has_methodology>
+  </abstract:Education>
+  <abstract:uEm-2s-1 rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#uEm-2s-1_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >uEm-2s-1</abstract:has_description>
+  </abstract:uEm-2s-1>
+  <abstract:hour rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#hour_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >h</abstract:has_description>
+  </abstract:hour>
+  <abstract:hPa rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#hPa_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >hPa</abstract:has_description>
+  </abstract:hPa>
+  <physical:Rain rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Rain_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Rain</abstract:has_description>
+  </physical:Rain>
+  <abstract:Intensity rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Intensity_Instance">
+    <abstract:has_characteristic rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Intensity</abstract:has_characteristic>
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Intensity</abstract:has_description>
+  </abstract:Intensity>
+  <abstract:m2 rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#m2_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >m²</abstract:has_description>
+  </abstract:m2>
+  <physical:Coral_Recruit rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Coral_Recruit_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Coral Recruit</abstract:has_description>
+  </physical:Coral_Recruit>
+  <spatial:Replicate_Transect rdf:about="http://maenad.itee.uq.edu.au/metadata/Spatial#Transect_10x1">
+    <spatial:has_quadrats rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_2"/>
+    <spatial:has_quadrats rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_3"/>
+    <spatial:has_quadrats rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_6"/>
+    <spatial:has_width rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1m</spatial:has_width>
+    <spatial:has_quadrats rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_8"/>
+    <spatial:has_quadrats rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_1"/>
+    <spatial:has_quadrats rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_5"/>
+    <spatial:has_length rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >10m</spatial:has_length>
+    <spatial:has_quadrats rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_7"/>
+    <spatial:has_quadrats rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_10"/>
+    <spatial:has_quadrats rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_4"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Transect used in Guillermo Diaz's algae surveys</rdfs:comment>
+    <spatial:has_quadrats rdf:resource="http://maenad.itee.uq.edu.au/metadata/Physical#Quadrat_1x1_9"/>
+  </spatial:Replicate_Transect>
+  <abstract:Volume rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Volume_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Volume</abstract:has_description>
+    <abstract:has_characteristic rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Volume</abstract:has_characteristic>
+  </abstract:Volume>
+  <abstract:Coral_Watch_Intensity rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Coral_Watch_Intensity_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Coral Watch Intensity</abstract:has_description>
+  </abstract:Coral_Watch_Intensity>
+  <abstract:Length rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Length_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Length</abstract:has_description>
+    <abstract:has_characteristic rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Length</abstract:has_characteristic>
+  </abstract:Length>
+  <physical:Air_Visibility rdf:about="http://maenad.itee.uq.edu.au/metadata/Physical#Air_Visibility_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Air Visibility</abstract:has_description>
+    <abstract:has_characteristic rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Visibility</abstract:has_characteristic>
+  </physical:Air_Visibility>
+  <abstract:AIMS_Bleaching_Level rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#AIMS_Bleaching_Level_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >AIMS Bleaching Level</abstract:has_description>
+  </abstract:AIMS_Bleaching_Level>
+  <abstract:Bleaching_Level rdf:about="http://maenad.itee.uq.edu.au/metadata/Abstract#Bleaching_Level_Instance">
+    <abstract:has_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bleaching Level</abstract:has_description>
+    <abstract:has_characteristic rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bleaching Level</abstract:has_characteristic>
+  </abstract:Bleaching_Level>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4.1, Build 536)  http://protege.stanford.edu -->

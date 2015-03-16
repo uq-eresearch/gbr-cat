@@ -1,0 +1,11 @@
+/*
+* Some custom CSS overrides for the REIfS Application
+* Author: 	Campbell Allen
+* Date:		01/04/2009
+*/
+
+.gwt-PopupPanel {
+    /*opacity:0.9;
+    overflow:auto; */
+    z-index:10 /* needed to fix a bug: fieldSet lables were rendering on top of popups */
+}

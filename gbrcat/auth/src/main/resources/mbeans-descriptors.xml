@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<mbeans-descriptors>
+
+  <mbean         name="UQRealm"
+            className="org.apache.catalina.mbeans.ClassNameMBean"
+          description="Implementation of a Tomcat Security Realm that auths from LDAP, but assigns roles from a database."
+               domain="Catalina"
+                group="Realm"
+                 type="au.edu.uq.eresearch.UQRealm">
+
+    <attribute   name="className"
+          description="Fully qualified class name of the managed object"
+                 type="java.lang.String"
+            writeable="false"/>
+
+    <attribute   name="roleNameCol"
+          description="The column in the user role table that names a role"
+                 type="java.lang.String"/>
+
+    <attribute   name="userNameCol"
+          description="The column in the user table that holds the user's username"
+                 type="java.lang.String"/>
+
+    <attribute   name="userRoleTable"
+          description="The table that holds the relation between user's and roles"
+                 type="java.lang.String"/>
+
+    <attribute   name="jndiURL"
+ 	      description="The JNDI connection URL to authenticate against."
+                 type="java.lang.String"/>
+
+	<attribute name="jdbcURL"
+		  	   description="The JDBC connection URL to authorise against."
+		  	   type="java.lang.String" />
+
+	<attribute name="driverName"
+		  description="JDBC driver class name"
+		  	   type="java.lang.String" />
+
+    <attribute   name="roleBase"
+          description="The base element for role searches"
+                 type="java.lang.String"/>
+
+    <attribute   name="roleName"
+          description="The name of the attribute containing roles held elsewhere"
+                 type="java.lang.String"/>
+
+    <attribute   name="roleSearch"
+          description="The message format used to select roles for a user"
+                 type="java.lang.String"/>
+
+    <attribute   name="roleSubtree"
+          description="Should we search the entire subtree for matching memberships?"
+                 type="boolean"/>
+
+    <attribute   name="userBase"
+          description="The base element for user searches"
+                 type="java.lang.String"/>
+
+    <attribute   name="userPattern"
+          description="The message format used to select a user"
+                 type="java.lang.String"/>
+
+     <attribute   name="userRoleName"
+          description="The name of the attribute in the user's entry containing roles for that user"
+                 type="java.lang.String"/>
+
+   <attribute   name="userSearch"
+         description="The message format used to search for a user"
+                type="java.lang.String"/>
+
+    <attribute   name="userSubtree"
+          description="Should we search the entire subtree for matching users?"
+                 type="boolean"/>
+
+    <operation name="start" description="Start" impact="ACTION" returnType="void" />
+    <operation name="stop" description="Stop" impact="ACTION" returnType="void" />
+    <operation name="init" description="Init" impact="ACTION" returnType="void" />
+    <operation name="destroy" description="Destroy" impact="ACTION" returnType="void" />
+  </mbean>
+</mbeans-descriptors>

@@ -1,0 +1,52 @@
+<project name="REIfSReader" default="dist" basedir=".">
+	<description>Build File for REIfSReader</description>
+
+	<!-- set global properties for this build -->
+	<property name="src" location="src" />
+	<property name="build" location="build" />
+
+	<path id="protege-libs">
+		<fileset dir="..">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<property name="reifs-reader-jar" location="reifs-reader.jar" />
+
+	<target name="init">
+		<!-- Create the time stamp -->
+		<tstamp />
+		<!-- Create the build directory structure used by compile -->
+		<mkdir dir="${build}" />
+	</target>
+
+	<target name="compile" depends="init" description="compile the source ">
+		<!-- Compile the java code from ${src} into ${build} -->
+		<javac srcdir="${src}" destdir="${build}" debug="yes">
+			<classpath refid="protege-libs" />
+		</javac>
+	</target>
+
+	<target name="dist" depends="compile" description="generate the distribution">
+		<!-- Put all the class files into the JAR -->
+		<jar jarfile="${reifs-reader-jar}" basedir="${build}" />
+	</target>
+
+	<target name="run" depends="dist">
+		<fail unless="owl-file" message="No OWL file supplied, use: 'ant run -Dowl-file=&lt;url&gt;'"/>
+		<echo>Running REIfSReader with OWL file: ${owl-file}</echo>
+		<java classname="au.edu.uq.itee.cresis.REIfSReader" failonerror="true">
+			<classpath refid="protege-libs" />
+			<arg value="${owl-file}"/>
+			<arg value="-Dfile.encoding=UTF8"/>
+		</java>
+		<echo>PL/SQL STATEMENTS WRITTEN TOO: REIfS.sql</echo>
+	</target>
+
+	<target name="clean" description="clean up">
+		<!-- Delete the ${build} directory tree -->
+		<delete dir="${build}" />
+		<delete dir="logs" />
+		<delete file="${reifs-reader-jar}"/>
+	</target>
+</project>

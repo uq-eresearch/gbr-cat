@@ -1,0 +1,45 @@
+<!--
+  ~ Copyright (c) 2011, The University of Queensland
+  ~ All rights reserved.
+  ~
+  ~ Redistribution and use in source and binary forms, with or without
+  ~ modification, are permitted provided that the following conditions are met:
+  ~     * Redistributions of source code must retain the above copyright
+  ~       notice, this list of conditions and the following disclaimer.
+  ~     * Redistributions in binary form must reproduce the above copyright
+  ~       notice, this list of conditions and the following disclaimer in the
+  ~       documentation and/or other materials provided with the distribution.
+  ~     * Neither the name of The University of Queensland nor the
+  ~       names of its contributors may be used to endorse or promote products
+  ~       derived from this software without specific prior written permission.
+  ~
+  ~ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+  ~ ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+  ~ WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+  ~ DISCLAIMED. IN NO EVENT SHALL THE UNIVERSITY OF QUEENSLAND BE LIABLE FOR ANY
+  ~ DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+  ~ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+  ~ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+  ~ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  ~ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+  -->
+
+<module rename-to="cresis">
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User'/>
+	<inherits name="com.google.gwt.maps.GoogleMaps" />
+	<inherits name="com.gwtext.GwtExt" />
+	<!-- inherits name="com.google.gwt.http.HTTP"/ -->
+	<!-- inherits name='com.gwtextux.GwtExtUx'/ -->
+	<!-- inherits name="com.gwtext.Charts" / -->
+	<!-- inherits name="com.eg.gwt.openLayers.OpenLayers"/ -->
+
+	<!-- Specify the app entry point class. -->
+	<entry-point class='au.edu.uq.eresearch.client.Cresis'/>
+
+	<!-- Specify the servlet. -->
+	<servlet path="/server" class="au.edu.uq.eresearch.server.ServiceImpl"/>
+
+	<!-- gbrcat.metadata.net key -->
+  <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAA7Y6FhZlMG6laxTCTHh7RrhSuTrH6Z2pVHS3veiumQZWew7D9sRTTOuDyjQtB1XJzTYzgLm1nd3huyA" />
+</module>

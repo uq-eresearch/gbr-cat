@@ -1,0 +1,16 @@
+<?xml version='1.0'?>
+<target>
+    <leaf id='Sponge' title="Sponge" qtip="All Sponge measurements" type="organism"/>
+    <folder id='Coral' title="Coral" qtip="All Coral measurements" type="organism">
+    	<leaf id='Dead Coral' title="Dead Coral" qtip="All Dead Coral measurements" type="organism"/>
+        <leaf id='Bleached Coral' title="Bleached Coral" qtip="All Bleached Coral measurements" type="organism"/>
+        <leaf id='Coral Recruit' title="Coral Recruit" qtip="All Coral Recruit measurements" type="organism"/>
+        <leaf id='Soft Coral' title="Soft Coral" qtip="All Soft Coral measurements" type="organism"/>
+    </folder>
+    <leaf id='Algae' title="Algae" qtip="All Algae measurements" type="organism"/>
+    <leaf id='Reef' title="Reef" qtip="All Reef measurements" type="environment"/>
+    <leaf id='Bleached Reef' title="Bleached Reef" qtip="All Bleached Reef measurements" type="environment"/>
+    <leaf id='Sea Water' title="Sea Water" qtip="All Sea Water measurements" type="environment"/>
+    <leaf id='Environment' title="Environment" qtip="All Environment measurements" type="environment"/>
+    <leaf id='Sand' title="Sand" qtip="All Sand measurements" type="environment"/>
+</target>

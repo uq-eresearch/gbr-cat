@@ -1,0 +1,1257 @@
+<?xml version='1.0'?>
+<queries>
+<query>
+	<north>null</north>
+	<south>null</south>
+	<east>null</east>
+	<west>null</west>
+	<lat>null</lat>
+	<lon>null</lon>
+	<start_date>null</start_date>
+	<end_date>null</end_date>
+	<target>null</target>
+	<characteristic>null</characteristic>
+	<location>null</location>
+	<actor>Guillermo Diaz</actor>
+	<measurement_value>null</measurement_value>
+	<unit>null</unit>
+	<research_program>null</research_program>
+	<ecological_process>null</ecological_process>
+	<process_output>null</process_output>
+	<genus>null</genus>
+	<species>null</species>
+	<morphology>null</morphology>
+	<depth>null</depth>
+	<sensor>null</sensor>
+	<description>All unique measurements by Guillermo Diaz</description>
+	<north1>null</north1>
+	<south1>null</south1>
+	<east1>null</east1>
+	<west1>null</west1>
+	<lat1>null</lat1>
+	<lon1>null</lon1>
+	<start_date1>null</start_date1>
+	<end_date1>null</end_date1>
+	<target1>null</target1>
+	<characteristic1>null</characteristic1>
+	<location1>null</location1>
+	<actor1>null</actor1>
+	<measurement_value1>null</measurement_value1>
+	<unit1>null</unit1>
+	<research_program1>null</research_program1>
+	<ecological_process1>null</ecological_process1>
+	<process_output1>null</process_output1>
+	<genus1>null</genus1>
+	<species1>null</species1>
+	<morphology1>null</morphology1>
+	<depth1>null</depth1>
+	<sensor1>null</sensor1>
+	<location_filter>null</location_filter>
+	<datetime_filter>null</datetime_filter>
+	<join_query>false</join_query>
+	<join_query_datetime>false</join_query_datetime>
+	<join_query_location>false</join_query_location>
+	<query_string>PREFIX event: &lt;http://maenad.itee.uq.edu.au/metadata/Event#&gt;
+PREFIX spatial: &lt;http://maenad.itee.uq.edu.au/metadata/Spatial#&gt;
+PREFIX context: &lt;http://maenad.itee.uq.edu.au/metadata/Context#&gt;
+PREFIX temporal: &lt;http://maenad.itee.uq.edu.au/metadata/Temporal#&gt;
+PREFIX physical: &lt;http://maenad.itee.uq.edu.au/metadata/Physical#&gt;
+PREFIX actor: &lt;http://maenad.itee.uq.edu.au/metadata/Actor#&gt;
+PREFIX abstract: &lt;http://maenad.itee.uq.edu.au/metadata/Abstract#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+
+SELECT DISTINCT ?target ?characteristic ?begindate ?enddate ?actorname ?locname ?lat ?lat_end ?lon ?lon_end ?unitsymbol ?value
+WHERE {
+	?datetime temporal:has_datetime ?begindate .
+	OPTIONAL { ?datetime temporal:has_end_datetime ?enddate } .
+	?context context:has_datetime ?datetime .
+	?location spatial:has_longitude ?lon .
+	?location spatial:has_latitude ?lat .
+	OPTIONAL { ?location spatial:has_end_longitude ?end_lon .
+	           ?location spatial:has_end_latitude ?end_lat } .
+	?location spatial:has_name ?locname .
+	?context context:has_location ?location .
+	?unit abstract:has_description ?unitsymbol .
+	?measurement event:has_unit ?unit .
+	?measurement event:has_value ?value .
+	?characteristic_type abstract:has_description ?characteristic .
+    ?measurement event:has_characteristic ?characteristic_type .
+	?actor actor:has_name ?actorname .
+	FILTER regex(?actorname, "Guillermo Diaz", "i") .
+	?instance event:has_actor ?actor .
+	?target_type abstract:has_description ?target .
+	?instance event:of_target ?target_type .
+	?instance event:has_context ?context .
+	?instance event:has_measurement ?measurement .
+	?instance rdf:type ?observation .
+	?observation rdfs:subClassOf event:Observation .
+}
+	</query_string>
+</query>
+<query>
+	<north>null</north>
+	<south>null</south>
+	<east>null</east>
+	<west>null</west>
+	<lat>null</lat>
+	<lon>null</lon>
+	<start_date>null</start_date>
+	<end_date>null</end_date>
+	<target>null</target>
+	<characteristic>null</characteristic>
+	<location>Heron Island</location>
+	<actor>null</actor>
+	<measurement_value>null</measurement_value>
+	<unit>null</unit>
+	<research_program>null</research_program>
+	<ecological_process>null</ecological_process>
+	<process_output>null</process_output>
+	<genus>null</genus>
+	<species>null</species>
+	<morphology>null</morphology>
+	<depth>null</depth>
+	<sensor>null</sensor>
+	<description>All unique measurements with location name Heron Island</description>
+	<north1>null</north1>
+	<south1>null</south1>
+	<east1>null</east1>
+	<west1>null</west1>
+	<lat1>null</lat1>
+	<lon1>null</lon1>
+	<start_date1>null</start_date1>
+	<end_date1>null</end_date1>
+	<target1>null</target1>
+	<characteristic1>null</characteristic1>
+	<location1>null</location1>
+	<actor1>null</actor1>
+	<measurement_value1>null</measurement_value1>
+	<unit1>null</unit1>
+	<research_program1>null</research_program1>
+	<ecological_process1>null</ecological_process1>
+	<process_output1>null</process_output1>
+	<genus1>null</genus1>
+	<species1>null</species1>
+	<morphology1>null</morphology1>
+	<depth1>null</depth1>
+	<sensor1>null</sensor1>
+	<location_filter>null</location_filter>
+	<datetime_filter>null</datetime_filter>
+	<join_query>false</join_query>
+	<join_query_datetime>false</join_query_datetime>
+	<join_query_location>false</join_query_location>
+	<query_string>PREFIX event: &lt;http://maenad.itee.uq.edu.au/metadata/Event#&gt;
+PREFIX spatial: &lt;http://maenad.itee.uq.edu.au/metadata/Spatial#&gt;
+PREFIX context: &lt;http://maenad.itee.uq.edu.au/metadata/Context#&gt;
+PREFIX temporal: &lt;http://maenad.itee.uq.edu.au/metadata/Temporal#&gt;
+PREFIX physical: &lt;http://maenad.itee.uq.edu.au/metadata/Physical#&gt;
+PREFIX actor: &lt;http://maenad.itee.uq.edu.au/metadata/Actor#&gt;
+PREFIX abstract: &lt;http://maenad.itee.uq.edu.au/metadata/Abstract#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+
+SELECT DISTINCT ?target ?characteristic ?begindate ?enddate ?actorname ?locname ?lat ?lat_end ?lon ?lon_end ?unitsymbol ?value
+WHERE {
+	?datetime temporal:has_datetime ?begindate .
+	OPTIONAL { ?datetime temporal:has_end_datetime ?enddate } .
+	?context context:has_datetime ?datetime .
+	?location spatial:has_longitude ?lon .
+	?location spatial:has_latitude ?lat .
+	OPTIONAL { ?location spatial:has_end_longitude ?end_lon .
+	           ?location spatial:has_end_latitude ?end_lat } .
+	?location spatial:has_name ?locname .
+	FILTER regex(?locname, "Heron Island", "i") .
+	?context context:has_location ?location .
+	?unit abstract:has_description ?unitsymbol .
+	?measurement event:has_unit ?unit .
+	?measurement event:has_value ?value .
+	?characteristic_type abstract:has_description ?characteristic .
+    ?measurement event:has_characteristic ?characteristic_type .
+	?instance event:has_actor ?actor .
+	?actor actor:has_name ?actorname .
+	?instance event:has_actor ?actor .
+	?target_type abstract:has_description ?target .
+	?instance event:of_target ?target_type .
+	?instance event:has_context ?context .
+	?instance event:has_measurement ?measurement .
+	?instance rdf:type ?observation .
+	?observation rdfs:subClassOf event:Observation .
+}
+	</query_string>
+</query>
+<query>
+	<north>-23.3</north>
+	<south>-23.5</south>
+	<east>152.0</east>
+	<west>151.8</west>
+	<lat>null</lat>
+	<lon>null</lon>
+	<start_date>null</start_date>
+	<end_date>null</end_date>
+	<target>null</target>
+	<characteristic>null</characteristic>
+	<location>null</location>
+	<actor>null</actor>
+	<measurement_value>null</measurement_value>
+	<unit>null</unit>
+	<research_program>null</research_program>
+	<ecological_process>null</ecological_process>
+	<process_output>null</process_output>
+	<genus>null</genus>
+	<species>null</species>
+	<morphology>null</morphology>
+	<depth>null</depth>
+	<sensor>null</sensor>
+	<description>All unique measurements in 0.1Deg box around Heron Island</description>
+	<north1>null</north1>
+	<south1>null</south1>
+	<east1>null</east1>
+	<west1>null</west1>
+	<lat1>null</lat1>
+	<lon1>null</lon1>
+	<start_date1>null</start_date1>
+	<end_date1>null</end_date1>
+	<target1>null</target1>
+	<characteristic1>null</characteristic1>
+	<location1>null</location1>
+	<actor1>null</actor1>
+	<measurement_value1>null</measurement_value1>
+	<unit1>null</unit1>
+	<research_program1>null</research_program1>
+	<ecological_process1>null</ecological_process1>
+	<process_output1>null</process_output1>
+	<genus1>null</genus1>
+	<species1>null</species1>
+	<morphology1>null</morphology1>
+	<depth1>null</depth1>
+	<sensor1>null</sensor1>
+	<location_filter>null</location_filter>
+	<datetime_filter>null</datetime_filter>
+	<join_query>false</join_query>
+	<join_query_datetime>false</join_query_datetime>
+	<join_query_location>false</join_query_location>
+	<query_string>PREFIX event: &lt;http://maenad.itee.uq.edu.au/metadata/Event#&gt;
+PREFIX spatial: &lt;http://maenad.itee.uq.edu.au/metadata/Spatial#&gt;
+PREFIX context: &lt;http://maenad.itee.uq.edu.au/metadata/Context#&gt;
+PREFIX temporal: &lt;http://maenad.itee.uq.edu.au/metadata/Temporal#&gt;
+PREFIX physical: &lt;http://maenad.itee.uq.edu.au/metadata/Physical#&gt;
+PREFIX actor: &lt;http://maenad.itee.uq.edu.au/metadata/Actor#&gt;
+PREFIX abstract: &lt;http://maenad.itee.uq.edu.au/metadata/Abstract#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+
+SELECT DISTINCT ?target ?characteristic ?begindate ?enddate ?actorname ?locname ?lat ?lat_end ?lon ?lon_end ?unitsymbol ?value
+WHERE {
+	?datetime temporal:has_datetime ?begindate .
+	OPTIONAL { ?datetime temporal:has_end_datetime ?enddate } .
+	?context context:has_datetime ?datetime .
+	?location spatial:has_longitude ?lon .
+	?location spatial:has_latitude ?lat .
+	FILTER (?lon &lt;= 152.0 &amp;&amp; ?lat &lt;= -23.3) .
+	OPTIONAL { ?location spatial:has_end_longitude ?end_lon .
+	           ?location spatial:has_end_latitude ?end_lat .
+	FILTER (?lon_end &gt;= 151.8 &amp;&amp; ?lat_end &gt;= -23.5) } .
+	?location spatial:has_name ?locname .
+	?context context:has_location ?location .
+	?unit abstract:has_description ?unitsymbol .
+	?measurement event:has_unit ?unit .
+	?measurement event:has_value ?value .
+	?characteristic_type abstract:has_description ?characteristic .
+    ?measurement event:has_characteristic ?characteristic_type .
+	?instance event:has_actor ?actor .
+	?actor actor:has_name ?actorname .
+	?instance event:has_actor ?actor .
+	?target_type abstract:has_description ?target .
+	?instance event:of_target ?target_type .
+	?instance event:has_context ?context .
+	?instance event:has_measurement ?measurement .
+	?instance rdf:type ?observation .
+	?observation rdfs:subClassOf event:Observation .
+}
+	</query_string>
+</query>
+<query>
+	<north>null</north>
+	<south>null</south>
+	<east>null</east>
+	<west>null</west>
+	<lat>null</lat>
+	<lon>null</lon>
+	<start_date>null</start_date>
+	<end_date>null</end_date>
+	<target>null</target>
+	<characteristic>null</characteristic>
+	<location>Seab</location>
+	<actor>Juan Carlos Ortiz</actor>
+	<measurement_value>null</measurement_value>
+	<unit>null</unit>
+	<research_program>null</research_program>
+	<ecological_process>null</ecological_process>
+	<process_output>null</process_output>
+	<genus>null</genus>
+	<species>null</species>
+	<morphology>null</morphology>
+	<depth>null</depth>
+	<sensor>null</sensor>
+	<description>All unique measurements at the Seab Site by Juan Carlos</description>
+	<north1>null</north1>
+	<south1>null</south1>
+	<east1>null</east1>
+	<west1>null</west1>
+	<lat1>null</lat1>
+	<lon1>null</lon1>
+	<start_date1>null</start_date1>
+	<end_date1>null</end_date1>
+	<target1>null</target1>
+	<characteristic1>null</characteristic1>
+	<location1>null</location1>
+	<actor1>null</actor1>
+	<measurement_value1>null</measurement_value1>
+	<unit1>null</unit1>
+	<research_program1>null</research_program1>
+	<ecological_process1>null</ecological_process1>
+	<process_output1>null</process_output1>
+	<genus1>null</genus1>
+	<species1>null</species1>
+	<morphology1>null</morphology1>
+	<depth1>null</depth1>
+	<sensor1>null</sensor1>
+	<location_filter>null</location_filter>
+	<datetime_filter>null</datetime_filter>
+	<join_query>false</join_query>
+	<join_query_datetime>false</join_query_datetime>
+	<join_query_location>false</join_query_location>
+	<query_string>PREFIX event: &lt;http://maenad.itee.uq.edu.au/metadata/Event#&gt;
+PREFIX spatial: &lt;http://maenad.itee.uq.edu.au/metadata/Spatial#&gt;
+PREFIX context: &lt;http://maenad.itee.uq.edu.au/metadata/Context#&gt;
+PREFIX temporal: &lt;http://maenad.itee.uq.edu.au/metadata/Temporal#&gt;
+PREFIX physical: &lt;http://maenad.itee.uq.edu.au/metadata/Physical#&gt;
+PREFIX actor: &lt;http://maenad.itee.uq.edu.au/metadata/Actor#&gt;
+PREFIX abstract: &lt;http://maenad.itee.uq.edu.au/metadata/Abstract#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+
+SELECT DISTINCT ?target ?characteristic ?begindate ?enddate ?actorname ?locname ?lat ?lat_end ?lon ?lon_end ?unitsymbol ?value
+WHERE {
+	?datetime temporal:has_datetime ?begindate .
+	OPTIONAL { ?datetime temporal:has_end_datetime ?enddate } .
+	?context context:has_datetime ?datetime .
+	?location spatial:has_longitude ?lon .
+	?location spatial:has_latitude ?lat .
+	OPTIONAL { ?location spatial:has_end_longitude ?end_lon .
+	           ?location spatial:has_end_latitude ?end_lat } .
+	?location spatial:has_name ?locname .
+	FILTER regex(?locname, "Seab", "i") .
+	?context context:has_location ?location .
+	?unit abstract:has_description ?unitsymbol .
+	?measurement event:has_unit ?unit .
+	?measurement event:has_value ?value .
+	?characteristic_type abstract:has_description ?characteristic .
+    ?measurement event:has_characteristic ?characteristic_type .
+	?instance event:has_actor ?actor .
+	?actor actor:has_name ?actorname .
+	FILTER regex(?actorname, "Juan Carlos Ortiz", "i") .
+	?instance event:has_actor ?actor .
+	?target_type abstract:has_description ?target .
+	?instance event:of_target ?target_type .
+	?instance event:has_context ?context .
+	?instance event:has_measurement ?measurement .
+	?instance rdf:type ?observation .
+	?observation rdfs:subClassOf event:Observation .
+}
+	</query_string>
+</query>
+<query>
+	<north>-22.0</north>
+	<south>-22.5</south>
+	<east>153.0</east>
+	<west>151.0</west>
+	<lat>null</lat>
+	<lon>null</lon>
+	<start_date>null</start_date>
+	<end_date>null</end_date>
+	<target>null</target>
+	<characteristic>null</characteristic>
+	<location>null</location>
+	<actor>null</actor>
+	<measurement_value>null</measurement_value>
+	<unit>null</unit>
+	<research_program>null</research_program>
+	<ecological_process>null</ecological_process>
+	<process_output>null</process_output>
+	<genus>null</genus>
+	<species>null</species>
+	<morphology>null</morphology>
+	<depth>null</depth>
+	<sensor>null</sensor>
+	<description>All the unique measurements between the coordinates</description>
+	<north1>null</north1>
+	<south1>null</south1>
+	<east1>null</east1>
+	<west1>null</west1>
+	<lat1>null</lat1>
+	<lon1>null</lon1>
+	<start_date1>null</start_date1>
+	<end_date1>null</end_date1>
+	<target1>null</target1>
+	<characteristic1>null</characteristic1>
+	<location1>null</location1>
+	<actor1>null</actor1>
+	<measurement_value1>null</measurement_value1>
+	<unit1>null</unit1>
+	<research_program1>null</research_program1>
+	<ecological_process1>null</ecological_process1>
+	<process_output1>null</process_output1>
+	<genus1>null</genus1>
+	<species1>null</species1>
+	<morphology1>null</morphology1>
+	<depth1>null</depth1>
+	<sensor1>null</sensor1>
+	<location_filter>null</location_filter>
+	<datetime_filter>null</datetime_filter>
+	<join_query>false</join_query>
+	<join_query_datetime>false</join_query_datetime>
+	<join_query_location>false</join_query_location>
+	<query_string>PREFIX event: &lt;http://maenad.itee.uq.edu.au/metadata/Event#&gt;
+PREFIX spatial: &lt;http://maenad.itee.uq.edu.au/metadata/Spatial#&gt;
+PREFIX context: &lt;http://maenad.itee.uq.edu.au/metadata/Context#&gt;
+PREFIX temporal: &lt;http://maenad.itee.uq.edu.au/metadata/Temporal#&gt;
+PREFIX physical: &lt;http://maenad.itee.uq.edu.au/metadata/Physical#&gt;
+PREFIX actor: &lt;http://maenad.itee.uq.edu.au/metadata/Actor#&gt;
+PREFIX abstract: &lt;http://maenad.itee.uq.edu.au/metadata/Abstract#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+
+SELECT DISTINCT ?target ?characteristic ?begindate ?enddate ?actorname ?locname ?lat ?lat_end ?lon ?lon_end ?unitsymbol ?value
+WHERE {
+	?datetime temporal:has_datetime ?begindate .
+	OPTIONAL { ?datetime temporal:has_end_datetime ?enddate } .
+	?context context:has_datetime ?datetime .
+	?location spatial:has_longitude ?lon .
+	?location spatial:has_latitude ?lat .
+	FILTER (?lon &lt;= 156.8 &amp;&amp; ?lat &lt;= -15.5) .
+	OPTIONAL { ?location spatial:has_end_longitude ?end_lon .
+	           ?location spatial:has_end_latitude ?end_lat .
+	FILTER (?lon_end &gt;= 143.0 &amp;&amp; ?lat_end &gt;= -22.5) } .
+	?location spatial:has_name ?locname .
+	?context context:has_location ?location .
+	?unit abstract:has_description ?unitsymbol .
+	?measurement event:has_unit ?unit .
+	?measurement event:has_value ?value .
+	?characteristic_type abstract:has_description ?characteristic .
+    ?measurement event:has_characteristic ?characteristic_type .
+	?instance event:has_actor ?actor .
+	?actor actor:has_name ?actorname .
+	?instance event:has_actor ?actor .
+	?target_type abstract:has_description ?target .
+	?instance event:of_target ?target_type .
+	?instance event:has_context ?context .
+	?instance event:has_measurement ?measurement .
+	?instance rdf:type ?observation .
+	?observation rdfs:subClassOf event:Observation .
+}
+	</query_string>
+</query>
+<query>
+	<north>null</north>
+	<south>null</south>
+	<east>null</east>
+	<west>null</west>
+	<lat>null</lat>
+	<lon>null</lon>
+	<start_date>2001-12-01T00:00:00</start_date>
+	<end_date>2002-02-28T00:00:00</end_date>
+	<target>null</target>
+	<characteristic>null</characteristic>
+	<location>null</location>
+	<actor>null</actor>
+	<measurement_value>null</measurement_value>
+	<unit>null</unit>
+	<research_program>null</research_program>
+	<ecological_process>null</ecological_process>
+	<process_output>null</process_output>
+	<genus>null</genus>
+	<species>null</species>
+	<morphology>null</morphology>
+	<depth>null</depth>
+	<sensor>null</sensor>
+	<description>All unique measurements in date range</description>
+	<north1>null</north1>
+	<south1>null</south1>
+	<east1>null</east1>
+	<west1>null</west1>
+	<lat1>null</lat1>
+	<lon1>null</lon1>
+	<start_date1>null</start_date1>
+	<end_date1>null</end_date1>
+	<target1>null</target1>
+	<characteristic1>null</characteristic1>
+	<location1>null</location1>
+	<actor1>null</actor1>
+	<measurement_value1>null</measurement_value1>
+	<unit1>null</unit1>
+	<research_program1>null</research_program1>
+	<ecological_process1>null</ecological_process1>
+	<process_output1>null</process_output1>
+	<genus1>null</genus1>
+	<species1>null</species1>
+	<morphology1>null</morphology1>
+	<depth1>null</depth1>
+	<sensor1>null</sensor1>
+	<location_filter>null</location_filter>
+	<datetime_filter>null</datetime_filter>
+	<join_query>false</join_query>
+	<join_query_datetime>false</join_query_datetime>
+	<join_query_location>false</join_query_location>
+	<query_string>PREFIX event: &lt;http://maenad.itee.uq.edu.au/metadata/Event#&gt;
+PREFIX spatial: &lt;http://maenad.itee.uq.edu.au/metadata/Spatial#&gt;
+PREFIX context: &lt;http://maenad.itee.uq.edu.au/metadata/Context#&gt;
+PREFIX temporal: &lt;http://maenad.itee.uq.edu.au/metadata/Temporal#&gt;
+PREFIX physical: &lt;http://maenad.itee.uq.edu.au/metadata/Physical#&gt;
+PREFIX actor: &lt;http://maenad.itee.uq.edu.au/metadata/Actor#&gt;
+PREFIX abstract: &lt;http://maenad.itee.uq.edu.au/metadata/Abstract#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+
+SELECT DISTINCT ?target ?characteristic ?begindate ?enddate ?actorname ?locname ?lat ?lat_end ?lon ?lon_end ?unitsymbol ?value
+WHERE {
+	?datetime temporal:has_datetime ?begindate .
+	OPTIONAL { ?datetime temporal:has_end_datetime ?enddate } .
+	FILTER (?begindate &gt;="2002-01-01T09:00:00"^^xsd:dateTime &amp;&amp; ?enddate &lt;="2008-06-30T23:59:59"^^xsd:dateTime) .
+	?context context:has_datetime ?datetime .
+	?location spatial:has_longitude ?lon .
+	?location spatial:has_latitude ?lat .
+	OPTIONAL { ?location spatial:has_end_longitude ?end_lon .
+	           ?location spatial:has_end_latitude ?end_lat } .
+	?location spatial:has_name ?locname .
+	?context context:has_location ?location .
+	?unit abstract:has_description ?unitsymbol .
+	?measurement event:has_unit ?unit .
+	?measurement event:has_value ?value .
+	?characteristic_type abstract:has_description ?characteristic .
+    ?measurement event:has_characteristic ?characteristic_type .
+	?instance event:has_actor ?actor .
+	?actor actor:has_name ?actorname .
+	?instance event:has_actor ?actor .
+	?target_type abstract:has_description ?target .
+	?instance event:of_target ?target_type .
+	?instance event:has_context ?context .
+	?instance event:has_measurement ?measurement .
+	?instance rdf:type ?observation .
+	?observation rdfs:subClassOf event:Observation .
+}
+	</query_string>
+</query>
+<query>
+	<north>null</north>
+	<south>null</south>
+	<east>null</east>
+	<west>null</west>
+	<lat>-24.4</lat>
+	<lon>152.2</lon>
+	<start_date>null</start_date>
+	<end_date>null</end_date>
+	<target>null</target>
+	<characteristic>null</characteristic>
+	<location>null</location>
+	<actor>null</actor>
+	<measurement_value>null</measurement_value>
+	<unit>null</unit>
+	<research_program>null</research_program>
+	<ecological_process>null</ecological_process>
+	<process_output>null</process_output>
+	<genus>null</genus>
+	<species>null</species>
+	<morphology>null</morphology>
+	<depth>null</depth>
+	<sensor>null</sensor>
+	<description>All unique measurements at the specified location</description>
+	<north1>null</north1>
+	<south1>null</south1>
+	<east1>null</east1>
+	<west1>null</west1>
+	<lat1>null</lat1>
+	<lon1>null</lon1>
+	<start_date1>null</start_date1>
+	<end_date1>null</end_date1>
+	<target1>null</target1>
+	<characteristic1>null</characteristic1>
+	<location1>null</location1>
+	<actor1>null</actor1>
+	<measurement_value1>null</measurement_value1>
+	<unit1>null</unit1>
+	<research_program1>null</research_program1>
+	<ecological_process1>null</ecological_process1>
+	<process_output1>null</process_output1>
+	<genus1>null</genus1>
+	<species1>null</species1>
+	<morphology1>null</morphology1>
+	<depth1>null</depth1>
+	<sensor1>null</sensor1>
+	<location_filter>null</location_filter>
+	<datetime_filter>null</datetime_filter>
+	<join_query>false</join_query>
+	<join_query_datetime>false</join_query_datetime>
+	<join_query_location>false</join_query_location>
+	<query_string>PREFIX event: &lt;http://maenad.itee.uq.edu.au/metadata/Event#&gt;
+PREFIX spatial: &lt;http://maenad.itee.uq.edu.au/metadata/Spatial#&gt;
+PREFIX context: &lt;http://maenad.itee.uq.edu.au/metadata/Context#&gt;
+PREFIX temporal: &lt;http://maenad.itee.uq.edu.au/metadata/Temporal#&gt;
+PREFIX physical: &lt;http://maenad.itee.uq.edu.au/metadata/Physical#&gt;
+PREFIX actor: &lt;http://maenad.itee.uq.edu.au/metadata/Actor#&gt;
+PREFIX abstract: &lt;http://maenad.itee.uq.edu.au/metadata/Abstract#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+
+SELECT DISTINCT  ?instance ?target ?characteristic ?begindate ?enddate ?actorname ?locname ?lat ?lat_end ?lon ?lon_end ?unitsymbol ?value
+WHERE {
+	?datetime temporal:has_datetime ?begindate .
+	OPTIONAL { ?datetime temporal:has_end_datetime ?enddate } .
+	?context context:has_datetime ?datetime .
+	?location spatial:has_longitude ?lon .
+	?location spatial:has_latitude ?lat .
+	FILTER (?lat="-24.4"^^xsd:float &amp;&amp; ?lon="152.2"^^xsd:float) .
+	?location spatial:has_name ?locname .
+	?context context:has_location ?location .
+	?unit abstract:has_description ?unitsymbol .
+	?measurement event:has_unit ?unit .
+	?measurement event:has_value ?value .
+	?characteristic_type abstract:has_description ?characteristic .
+    ?measurement event:has_characteristic ?characteristic_type .
+	?instance event:has_actor ?actor .
+	?actor actor:has_name ?actorname .
+	?instance event:has_actor ?actor .
+	?target_type abstract:has_description ?target .
+	?instance event:of_target ?target_type .
+	?instance event:has_context ?context .
+	?instance event:has_measurement ?measurement .
+	?instance rdf:type ?observation .
+	?observation rdfs:subClassOf event:Observation .
+}
+ORDER BY ASC(?locationName)
+	</query_string>
+</query>
+<query>
+	<north>null</north>
+	<south>null</south>
+	<east>null</east>
+	<west>null</west>
+	<lat>null</lat>
+	<lon>null</lon>
+	<start_date>null</start_date>
+	<end_date>null</end_date>
+	<target>null</target>
+	<characteristic>null</characteristic>
+	<location>null</location>
+	<actor>null</actor>
+	<measurement_value>null</measurement_value>
+	<unit>m²</unit>
+	<research_program>null</research_program>
+	<ecological_process>null</ecological_process>
+	<process_output>null</process_output>
+	<genus>null</genus>
+	<species>null</species>
+	<morphology>null</morphology>
+	<depth>null</depth>
+	<sensor>null</sensor>
+	<description>All unique measurements with a specific unit</description>
+	<north1>null</north1>
+	<south1>null</south1>
+	<east1>null</east1>
+	<west1>null</west1>
+	<lat1>null</lat1>
+	<lon1>null</lon1>
+	<start_date1>null</start_date1>
+	<end_date1>null</end_date1>
+	<target1>null</target1>
+	<characteristic1>null</characteristic1>
+	<location1>null</location1>
+	<actor1>null</actor1>
+	<measurement_value1>null</measurement_value1>
+	<unit1>null</unit1>
+	<research_program1>null</research_program1>
+	<ecological_process1>null</ecological_process1>
+	<process_output1>null</process_output1>
+	<genus1>null</genus1>
+	<species1>null</species1>
+	<morphology1>null</morphology1>
+	<depth1>null</depth1>
+	<sensor1>null</sensor1>
+	<location_filter>null</location_filter>
+	<datetime_filter>null</datetime_filter>
+	<join_query>false</join_query>
+	<join_query_datetime>false</join_query_datetime>
+	<join_query_location>false</join_query_location>
+	<query_string>PREFIX event: &lt;http://maenad.itee.uq.edu.au/metadata/Event#&gt;
+PREFIX spatial: &lt;http://maenad.itee.uq.edu.au/metadata/Spatial#&gt;
+PREFIX context: &lt;http://maenad.itee.uq.edu.au/metadata/Context#&gt;
+PREFIX temporal: &lt;http://maenad.itee.uq.edu.au/metadata/Temporal#&gt;
+PREFIX physical: &lt;http://maenad.itee.uq.edu.au/metadata/Physical#&gt;
+PREFIX actor: &lt;http://maenad.itee.uq.edu.au/metadata/Actor#&gt;
+PREFIX abstract: &lt;http://maenad.itee.uq.edu.au/metadata/Abstract#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+
+SELECT DISTINCT ?instance ?target ?characteristic ?begindate ?enddate ?actorname ?locname ?lat ?lat_end ?lon ?lon_end ?unitsymbol ?value
+WHERE {
+	?datetime temporal:has_datetime ?begindate .
+	OPTIONAL { ?datetime temporal:has_end_datetime ?enddate } .
+	?context context:has_datetime ?datetime .
+	?location spatial:has_longitude ?lon .
+	?location spatial:has_latitude ?lat .
+	OPTIONAL { ?location spatial:has_end_longitude ?end_lon .
+	           ?location spatial:has_end_latitude ?end_lat } .
+	?location spatial:has_name ?locname .
+	?context context:has_location ?location .
+	?unit abstract:has_description ?unitsymbol .
+	FILTER regex(?unitSymbol, "m²", "i") .
+	?measurement event:has_unit ?unit .
+	?measurement event:has_value ?value .
+	?characteristic_type abstract:has_description ?characteristic .
+    ?measurement event:has_characteristic ?characteristic_type .
+	?instance event:has_actor ?actor .
+	?actor actor:has_name ?actorname .
+	?instance event:has_actor ?actor .
+	?target_type abstract:has_description ?target .
+	?instance event:of_target ?target_type .
+	?instance event:has_context ?context .
+	?instance event:has_measurement ?measurement .
+	?instance rdf:type ?observation .
+	?observation rdfs:subClassOf event:Observation .
+}
+	</query_string>
+</query>
+<query>
+	<north>null</north>
+	<south>null</south>
+	<east>null</east>
+	<west>null</west>
+	<lat>null</lat>
+	<lon>null</lon>
+	<start_date>null</start_date>
+	<end_date>null</end_date>
+	<target>null</target>
+	<characteristic>null</characteristic>
+	<location>null</location>
+	<actor>null</actor>
+	<measurement_value>&gt;28</measurement_value>
+	<unit>&#xb0;C</unit>
+	<research_program>null</research_program>
+	<ecological_process>null</ecological_process>
+	<process_output>null</process_output>
+	<genus>null</genus>
+	<species>null</species>
+	<morphology>null</morphology>
+	<depth>null</depth>
+	<sensor>null</sensor>
+	<description>All observations where a nearby sensor had a Max Temperature &gt; 28 DegC in summer 2006.</description>
+	<north1>null</north1>
+	<south1>null</south1>
+	<east1>null</east1>
+	<west1>null</west1>
+	<lat1>null</lat1>
+	<lon1>null</lon1>
+	<start_date1>2005-12-01T00:00:00</start_date1>
+	<end_date1>2006-02-28T23:59:59</end_date1>
+	<target1>null</target1>
+	<characteristic1>physical:Sea_Water_Temperature_Instance</characteristic1>
+	<location1>null</location1>
+	<actor1>null</actor1>
+	<measurement_value1>null</measurement_value1>
+	<unit1>null</unit1>
+	<research_program1>null</research_program1>
+	<ecological_process1>null</ecological_process1>
+	<process_output1>null</process_output1>
+	<genus1>null</genus1>
+	<species1>null</species1>
+	<morphology1>null</morphology1>
+	<depth1>null</depth1>
+	<sensor1>true</sensor1>
+	<location_filter>0.01</location_filter>
+	<datetime_filter>null</datetime_filter>
+	<join_query>true</join_query>
+	<join_query_datetime>false</join_query_datetime>
+	<join_query_location>true</join_query_location>
+	<query_string>PREFIX event: &lt;http://maenad.itee.uq.edu.au/metadata/Event#&gt;
+PREFIX spatial: &lt;http://maenad.itee.uq.edu.au/metadata/Spatial#&gt;
+PREFIX context: &lt;http://maenad.itee.uq.edu.au/metadata/Context#&gt;
+PREFIX temporal: &lt;http://maenad.itee.uq.edu.au/metadata/Temporal#&gt;
+PREFIX physical: &lt;http://maenad.itee.uq.edu.au/metadata/Physical#&gt;
+PREFIX actor: &lt;http://maenad.itee.uq.edu.au/metadata/Actor#&gt;
+PREFIX abstract: &lt;http://maenad.itee.uq.edu.au/metadata/Abstract#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+
+SELECT DISTINCT ?instance ?target ?characteristic ?begindate ?enddate ?actorname ?locname ?lat ?lat_end ?lon ?lon_end ?unitsymbol ?value
+WHERE {
+  ?context context:has_datetime ?datetime1 .
+  ?location spatial:has_longitude ?lon .
+  ?location spatial:has_latitude ?lat .
+  OPTIONAL { ?location spatial:has_end_longitude ?lon_end .
+                   ?location spatial:has_end_latitude ?lat_end } .
+  FILTER (?lon-?lon1 &lt;=0.01 &amp;&amp; ?lon1-?lon &lt;= 0.01) .
+  FILTER (?lat-?lat1 &lt;=0.01 &amp;&amp; ?lat1-?lat &lt;= 0.01) .
+  ?location spatial:has_name ?locname .
+  ?context context:has_location ?location .
+  ?unit abstract:has_description ?unitsymbol .
+  ?measurement event:has_unit ?unit .
+  ?measurement event:has_value ?value .
+  ?characteristic_type abstract:has_description ?characteristic .
+  ?measurement event:has_characteristic ?characteristic_type .
+  ?actor actor:has_name ?actorname .
+  ?instance event:has_actor ?actor .
+  ?target_type abstract:has_description ?target .
+  ?instance event:of_target ?target_type .
+  ?instance event:has_context ?context .
+  ?instance event:has_measurement ?measurement .
+  ?instance rdf:type ?observation .
+  ?observation rdfs:subClassOf event:Observation .
+  ?datetime temporal:has_datetime ?begindate .
+  FILTER (?begindate &gt;= "2005-12-01T00:00:00"^^xsd:dateTime) .
+  OPTIONAL { ?datetime temporal:has_end_datetime ?enddate .
+  FILTER (?enddate &lt;= "2006-02-28T00:00:00"^^xsd:dateTime) } .
+  ?context context:has_datetime ?datetime .
+  ?location1 spatial:has_longitude ?lon1 .
+  ?location1 spatial:has_latitude ?lat1 .
+  OPTIONAL { ?location1 spatial:has_end_longitude ?lon_end1 .
+                   ?location1 spatial:has_end_latitude ?lat_end1 } .
+  ?context context:has_location ?location1 .
+  ?unit abstract:has_description ?unitsymbol .
+  FILTER regex(?unitsymbol, "&#xb0;C","i") .
+  ?measurement1 event:has_unit ?unit .
+  ?measurement1 event:has_value ?value .
+  FILTER (?value &gt;28) .
+  ?measurement1 event:has_characteristic physical:Sea_Water_Temperature_Instance .
+  ?actor1 actor:has_name ?actorname1 .
+  ?actor1 rdf:type physical:Sensor .
+  ?instance1 event:has_context ?context .
+  ?instance1 event:has_measurement ?measurement1 .
+  ?instance1 rdf:type event:Environment_Sighting .
+}
+	</query_string>
+</query>
+<query>
+	<north>-23.0</north>
+	<south>-24.0</south>
+	<east>152.0</east>
+	<west>151.0</west>
+	<lat>null</lat>
+	<lon>null</lon>
+	<start_date>null</start_date>
+	<end_date>null</end_date>
+	<target>physical:Algae_Instance</target>
+	<characteristic>null</characteristic>
+	<location>null</location>
+	<actor>null</actor>
+	<measurement_value>null</measurement_value>
+	<unit>null</unit>
+	<research_program>null</research_program>
+	<ecological_process>null</ecological_process>
+	<process_output>null</process_output>
+	<genus>null</genus>
+	<species>null</species>
+	<morphology>Turf</morphology>
+	<depth>&lt;=5</depth>
+	<sensor>null</sensor>
+	<description>All sightings of “Turf Algae” within Lat. 151:152 and Long. -23:-24 in a depth &lt;=5m where the month of February MODIS SST had a max. temp &gt;=27</description>
+	<north1>-23.0</north1>
+	<south1>-24.0</south1>
+	<east1>152.0</east1>
+	<west1>151.0</west1>
+	<lat1>null</lat1>
+	<lon1>null</lon1>
+	<start_date1>2000-02-01T00:00:00</start_date1>
+	<end_date1>2009-02-29T23:59:59</end_date1>
+	<target1>null</target1>
+	<characteristic1>physical:Sea_Surface_Temperature_Instance</characteristic1>
+	<location1>null</location1>
+	<actor1>MODIS Satellite Remote Sensor</actor1>
+	<measurement_value1>&gt;=27</measurement_value1>
+	<unit1>&#xb0;C</unit1>
+	<research_program1>null</research_program1>
+	<ecological_process1>null</ecological_process1>
+	<process_output1>null</process_output1>
+	<genus1>null</genus1>
+	<species1>null</species1>
+	<morphology1>null</morphology1>
+	<depth1>null</depth1>
+	<sensor1>true</sensor1>
+	<location_filter>null</location_filter>
+	<datetime_filter>null</datetime_filter>
+	<join_query>true</join_query>
+	<join_query_datetime>true</join_query_datetime>
+	<join_query_location>false</join_query_location>
+	<query_string>PREFIX event: &lt;http://maenad.itee.uq.edu.au/metadata/Event#&gt;
+PREFIX spatial: &lt;http://maenad.itee.uq.edu.au/metadata/Spatial#&gt;
+PREFIX context: &lt;http://maenad.itee.uq.edu.au/metadata/Context#&gt;
+PREFIX temporal: &lt;http://maenad.itee.uq.edu.au/metadata/Temporal#&gt;
+PREFIX physical: &lt;http://maenad.itee.uq.edu.au/metadata/Physical#&gt;
+PREFIX actor: &lt;http://maenad.itee.uq.edu.au/metadata/Actor#&gt;
+PREFIX abstract: &lt;http://maenad.itee.uq.edu.au/metadata/Abstract#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+
+SELECT DISTINCT ?instance ?target ?characteristic ?begindate ?enddate ?actorname ?locname ?lat ?lat_end ?lon ?lon_end ?unitsymbol ?value ?depth
+WHERE {
+  ?datetime temporal:has_datetime ?begindate .
+  ?datetime temporal:has_end_datetime ?enddate .
+  ?context context:has_datetime ?datetime .
+  ?location spatial:has_longitude ?lon .
+  ?location spatial:has_latitude ?lat .
+  FILTER (?lon &lt;= 152.0 &amp;&amp; ?lat &lt;= -23.0) .
+  OPTIONAL { ?location spatial:has_end_longitude ?lon_end .
+                   ?location spatial:has_end_latitude ?lat_end .
+  FILTER (?lon_end &gt;= 151.0 &amp;&amp; ?lat_end &gt;= -24.0) } .  ?location spatial:has_name ?locname .
+  ?location spatial:has_name ?locname .
+  ?location spatial:has_depth ?depth .
+  FILTER (?depth &lt; 5) .
+  ?context context:has_location ?location .
+  ?unit abstract:has_description ?unitsymbol .
+  ?measurement event:has_unit ?unit .
+  ?measurement event:has_value ?value .
+  ?characteristic_type abstract:has_description ?characteristic .
+  ?measurement event:has_characteristic ?characteristic_type .
+  ?actor actor:has_name ?actorname .
+  ?instance event:has_actor ?actor .
+  ?instance event:has_morphology ?morphology .
+  FILTER regex(?morphology, "Turf","i") .
+  ?target_type abstract:has_description ?target .
+  ?instance event:of_target ?target_type .
+  ?instance event:of_target physical:Algae_Instance .
+  ?instance event:has_context ?context .
+  ?instance event:has_measurement ?measurement .
+  ?instance rdf:type ?observation .
+  ?observation rdfs:subClassOf event:Observation .
+  ?datetime temporal:has_datetime ?begindate .
+  FILTER (regex(str(?begindate), '200\d+?-02-\d{2}?')) .
+  OPTIONAL { ?datetime temporal:has_end_datetime ?enddate .
+  FILTER (regex(str(?enddate), '200\d+?-02-\d{2}?')) } .
+  ?context1 context:has_datetime ?datetime .
+  ?location1 spatial:has_longitude ?lon1 .
+  ?location1 spatial:has_latitude ?lat1 .
+  FILTER (?lat1 &lt;=-23.0 &amp;&amp; ?lon1 &lt;= 152.0) .
+  OPTIONAL { ?location1 spatial:has_end_longitude ?lon_end1 .
+                   ?location1 spatial:has_end_latitude ?lat_end1 .
+  FILTER (?lat_end1 &gt;=-24.0 &amp;&amp; ?lon_end1 &gt;= 151.0) } .
+  ?context1 context:has_location ?location1 .
+  ?unit1 abstract:has_description ?unitsymbol1 .
+  ?measurement1 event:has_unit ?unit1 .
+  FILTER regex(?unitsymbol, "°C","i") .
+  ?measurement1 event:has_value ?value .
+  FILTER (?value &gt;=27) .
+  ?measurement1 event:has_characteristic physical:Sea_Surface_Temperature_Instance .
+  ?actor1 actor:has_name ?actorname1 .
+  FILTER regex(?actorname1, "MODIS Satellite Remote Sensor", "i") .
+  ?instance1 event:has_actor ?actor1 .
+  ?actor1 rdf:type physical:Sensor .
+  ?instance1 event:has_context ?context1 .
+  ?instance1 event:has_measurement ?measurement1 .
+  ?instance1 rdf:type event:Environment_Sighting .
+}
+	</query_string>
+</query>
+<query>
+	<north>null</north>
+	<south>null</south>
+	<east>null</east>
+	<west>null</west>
+	<lat>null</lat>
+	<lon>null</lon>
+	<start_date>2000-01-01T00:00:00</start_date>
+	<end_date>2009-05-31T23:59:59</end_date>
+	<target>physical:Coral_Instance</target>
+	<characteristic>abstract:Area_Per_Quadrat_Instance</characteristic>
+	<location>Heron Island</location>
+	<actor>null</actor>
+	<measurement_value>null</measurement_value>
+	<unit>null</unit>
+	<research_program>null</research_program>
+	<ecological_process>null</ecological_process>
+	<process_output>null</process_output>
+	<genus>null</genus>
+	<species>null</species>
+	<morphology>null</morphology>
+	<depth>null</depth>
+	<sensor>null</sensor>
+	<description>What is the coral abundance on the reef flat at Heron Island and how does this change seasonally?</description>
+	<north1>null</north1>
+	<south1>null</south1>
+	<east1>null</east1>
+	<west1>null</west1>
+	<lat1>null</lat1>
+	<lon1>null</lon1>
+	<start_date1>null</start_date1>
+	<end_date1>null</end_date1>
+	<target1>null</target1>
+	<characteristic1>null</characteristic1>
+	<location1>null</location1>
+	<actor1>null</actor1>
+	<measurement_value1>null</measurement_value1>
+	<unit1>null</unit1>
+	<research_program1>null</research_program1>
+	<ecological_process1>null</ecological_process1>
+	<process_output1>null</process_output1>
+	<genus1>null</genus1>
+	<species1>null</species1>
+	<morphology1>null</morphology1>
+	<depth1>null</depth1>
+	<sensor1>true</sensor1>
+	<location_filter>null</location_filter>
+	<datetime_filter>null</datetime_filter>
+	<join_query>false</join_query>
+	<join_query_datetime>false</join_query_datetime>
+	<join_query_location>false</join_query_location>
+	<query_string>PREFIX event: &lt;http://maenad.itee.uq.edu.au/metadata/Event#&gt;
+PREFIX spatial: &lt;http://maenad.itee.uq.edu.au/metadata/Spatial#&gt;
+PREFIX context: &lt;http://maenad.itee.uq.edu.au/metadata/Context#&gt;
+PREFIX temporal: &lt;http://maenad.itee.uq.edu.au/metadata/Temporal#&gt;
+PREFIX physical: &lt;http://maenad.itee.uq.edu.au/metadata/Physical#&gt;
+PREFIX actor: &lt;http://maenad.itee.uq.edu.au/metadata/Actor#&gt;
+PREFIX abstract: &lt;http://maenad.itee.uq.edu.au/metadata/Abstract#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+
+SELECT DISTINCT ?instance ?target ?characteristic ?begindate ?enddate ?actorname ?locname ?lat ?lat_end ?lon ?lon_end ?unitsymbol ?value ?depth
+WHERE {
+  ?datetime temporal:has_datetime ?begindate .
+  FILTER (?begindate &gt;= "2000-01-01T00:00:00"^^xsd:dateTime) .
+  OPTIONAL { ?datetime temporal:has_end_datetime ?enddate .
+  FILTER (?enddate &lt;= "2009-05-31T23:59:59"^^xsd:dateTime) } .
+  ?context context:has_datetime ?datetime .
+  ?location spatial:has_longitude ?lon .
+  ?location spatial:has_latitude ?lat .
+  OPTIONAL { ?location spatial:has_end_longitude ?lon_end .
+                   ?location spatial:has_end_latitude ?lat_end } .
+  ?location spatial:has_name ?locname .
+  FILTER regex(?locname, "Heron Island", "i") .
+  ?context context:has_location ?location .
+  ?unit abstract:has_description ?unitsymbol .
+  ?measurement event:has_unit ?unit .
+  ?measurement event:has_value ?value .
+  ?characteristic_type abstract:has_description ?characteristic .
+  ?measurement event:has_characteristic ?characteristic_type .
+  ?measurement event:has_characteristic abstract:Area_Instance .
+  ?actor actor:has_name ?actorname .
+  ?instance event:has_actor ?actor .
+  ?target_type abstract:has_description ?target .
+  ?instance event:of_target ?target_type .
+  ?instance event:of_target physical:Coral_Instance .
+  ?instance event:has_context ?context .
+  ?instance event:has_measurement ?measurement .
+  ?instance rdf:type ?observation .
+  ?observation rdfs:subClassOf event:Observation .
+}
+	</query_string>
+</query>
+<query>
+	<north>null</north>
+	<south>null</south>
+	<east>null</east>
+	<west>null</west>
+	<lat>null</lat>
+	<lon>null</lon>
+	<start_date>2004-01-01T00:00:00</start_date>
+	<end_date>2009-05-31T23:59:59</end_date>
+	<target>physical:Algae_Instance</target>
+	<characteristic>null</characteristic>
+	<location>Barren Island</location>
+	<actor>null</actor>
+	<measurement_value>null</measurement_value>
+	<unit>null</unit>
+	<research_program>null</research_program>
+	<ecological_process>null</ecological_process>
+	<process_output>null</process_output>
+	<genus>null</genus>
+	<species>null</species>
+	<morphology>null</morphology>
+	<depth>null</depth>
+	<sensor>null</sensor>
+	<description>How has the algal diversity at Barren Island changed over the last 5 years?</description>
+	<north1>null</north1>
+	<south1>null</south1>
+	<east1>null</east1>
+	<west1>null</west1>
+	<lat1>null</lat1>
+	<lon1>null</lon1>
+	<start_date1>null</start_date1>
+	<end_date1>null</end_date1>
+	<target1>null</target1>
+	<characteristic1>null</characteristic1>
+	<location1>null</location1>
+	<actor1>null</actor1>
+	<measurement_value1>null</measurement_value1>
+	<unit1>null</unit1>
+	<research_program1>null</research_program1>
+	<ecological_process1>null</ecological_process1>
+	<process_output1>null</process_output1>
+	<genus1>null</genus1>
+	<species1>null</species1>
+	<morphology1>null</morphology1>
+	<depth1>null</depth1>
+	<sensor1>false</sensor1>
+	<location_filter>null</location_filter>
+	<datetime_filter>null</datetime_filter>
+	<join_query>false</join_query>
+	<join_query_datetime>false</join_query_datetime>
+	<join_query_location>false</join_query_location>
+	<query_string>PREFIX event: &lt;http://maenad.itee.uq.edu.au/metadata/Event#&gt;
+PREFIX spatial: &lt;http://maenad.itee.uq.edu.au/metadata/Spatial#&gt;
+PREFIX context: &lt;http://maenad.itee.uq.edu.au/metadata/Context#&gt;
+PREFIX temporal: &lt;http://maenad.itee.uq.edu.au/metadata/Temporal#&gt;
+PREFIX physical: &lt;http://maenad.itee.uq.edu.au/metadata/Physical#&gt;
+PREFIX actor: &lt;http://maenad.itee.uq.edu.au/metadata/Actor#&gt;
+PREFIX abstract: &lt;http://maenad.itee.uq.edu.au/metadata/Abstract#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+
+SELECT DISTINCT ?instance ?target ?characteristic ?genus ?species ?morphology ?begindate ?enddate ?actorname ?locname ?lat ?lat_end ?lon ?lon_end ?unitsymbol ?value ?depth
+WHERE {
+  ?datetime temporal:has_datetime ?begindate .
+  FILTER (?begindate &gt;= "2004-01-01T00:00:00"^^xsd:dateTime) .
+  OPTIONAL { ?datetime temporal:has_end_datetime ?enddate .
+  FILTER (?enddate &lt;= "2009-05-31T23:59:59"^^xsd:dateTime) } .
+  ?context context:has_datetime ?datetime .
+  ?location spatial:has_longitude ?lon .
+  ?location spatial:has_latitude ?lat .
+  OPTIONAL { ?location spatial:has_end_longitude ?lon_end .
+                   ?location spatial:has_end_latitude ?lat_end } .
+  ?location spatial:has_name ?locname .
+  FILTER regex(?locname, "Barren Island", "i") .
+  ?context context:has_location ?location .
+  ?unit abstract:has_description ?unitsymbol .
+  ?measurement event:has_unit ?unit .
+  ?measurement event:has_value ?value .
+  ?characteristic_type abstract:has_description ?characteristic .
+  ?measurement event:has_characteristic ?characteristic_type .
+  ?actor actor:has_name ?actorname .
+  ?instance event:has_actor ?actor .
+  ?instance event:has_genus ?genus .
+  ?instance event:has_species ?species .
+  ?instance event:has_morphology ?morphology .
+  ?target_type abstract:has_description ?target .
+  ?instance event:of_target ?target_type .
+  ?instance event:of_target physical:Algae_Instance .
+  ?instance event:has_context ?context .
+  ?instance event:has_measurement ?measurement .
+  ?instance rdf:type ?observation .
+  ?observation rdfs:subClassOf event:Observation .
+}
+	</query_string>
+</query>
+<query>
+	<north>null</north>
+	<south>null</south>
+	<east>null</east>
+	<west>null</west>
+	<lat>null</lat>
+	<lon>null</lon>
+	<start_date>null</start_date>
+	<end_date>null</end_date>
+	<target>null</target>
+	<characteristic>physical:Chlor_a_Instance</characteristic>
+	<location>null</location>
+	<actor>null</actor>
+	<measurement_value>&lt;=0.10</measurement_value>
+	<unit>null</unit>
+	<research_program>null</research_program>
+	<ecological_process>null</ecological_process>
+	<process_output>null</process_output>
+	<genus>null</genus>
+	<species>null</species>
+	<morphology>null</morphology>
+	<depth>null</depth>
+	<sensor>true</sensor>
+	<description>Find all time periods where intrusions of low chlorophyll waters onto the continental shelf coincide with in situ temperature data.</description>
+	<north1>null</north1>
+	<south1>null</south1>
+	<east1>null</east1>
+	<west1>null</west1>
+	<lat1>null</lat1>
+	<lon1>null</lon1>
+	<start_date1>null</start_date1>
+	<end_date1>null</end_date1>
+	<target1>null</target1>
+	<characteristic1>physical:Sea_Water_Temperature_Instance</characteristic1>
+	<location1>null</location1>
+	<actor1>null</actor1>
+	<measurement_value1>null</measurement_value1>
+	<unit1>null</unit1>
+	<research_program1>null</research_program1>
+	<ecological_process1>null</ecological_process1>
+	<process_output1>null</process_output1>
+	<genus1>null</genus1>
+	<species1>null</species1>
+	<morphology1>null</morphology1>
+	<depth1>null</depth1>
+	<sensor1>false</sensor1>
+	<location_filter>null</location_filter>
+	<datetime_filter>null</datetime_filter>
+	<join_query>true</join_query>
+	<join_query_datetime>true</join_query_datetime>
+	<join_query_location>false</join_query_location>
+	<query_string>PREFIX event: &lt;http://maenad.itee.uq.edu.au/metadata/Event#&gt;
+PREFIX spatial: &lt;http://maenad.itee.uq.edu.au/metadata/Spatial#&gt;
+PREFIX context: &lt;http://maenad.itee.uq.edu.au/metadata/Context#&gt;
+PREFIX temporal: &lt;http://maenad.itee.uq.edu.au/metadata/Temporal#&gt;
+PREFIX physical: &lt;http://maenad.itee.uq.edu.au/metadata/Physical#&gt;
+PREFIX actor: &lt;http://maenad.itee.uq.edu.au/metadata/Actor#&gt;
+PREFIX abstract: &lt;http://maenad.itee.uq.edu.au/metadata/Abstract#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+
+SELECT DISTINCT ?instance ?target ?characteristic ?measurement ?begindate ?enddate ?actorname ?locname ?lat ?lat_end ?lon ?lon_end ?unitsymbol ?value ?depth
+WHERE {
+  ?datetime1 temporal:has_datetime ?begindate .
+  OPTIONAL { ?datetime1 temporal:has_end_datetime ?enddate } .
+  ?context1 context:has_datetime ?datetime1 .
+  ?location1 spatial:has_longitude ?lon1 .
+  ?location1 spatial:has_latitude ?lat1 .
+  OPTIONAL { ?location1 spatial:has_end_longitude ?lon_end1 .
+                   ?location1 spatial:has_end_latitude ?lat_end1 .
+  ?context1 context:has_location ?location1 .
+  ?measurement1 event:has_characteristic physical:Sea_Water_Temperature_Instance .
+  ?instance1 event:has_context ?context1 .
+  ?instance1 event:has_measurement ?measurement1 .
+  ?instance1 rdf:type ?observation1 .
+  ?observation1 rdfs:subClassOf event:Observation .
+  ?datetime temporal:has_datetime ?begindate .
+  OPTIONAL { ?datetime temporal:has_end_datetime ?enddate . } .
+  ?location spatial:has_longitude ?lon .
+  ?location spatial:has_latitude ?lat .
+  OPTIONAL { ?location spatial:has_end_longitude ?lon_end .
+                   ?location spatial:has_end_latitude ?lat_end . } .
+  ?context context:has_datetime ?datetime .
+  ?location spatial:has_name ?locname .
+  ?context context:has_location ?location .
+  ?unit abstract:has_description ?unitsymbol .
+  ?measurement event:has_unit ?unit .
+  ?measurement event:has_value ?value .
+  FILTER (?value &lt;=0.10) .
+  ?characteristic_type abstract:has_description ?characteristic .
+  ?measurement event:has_characteristic ?characteristic_type .
+  ?actor actor:has_name ?actorname .
+  ?instance event:has_actor ?actor .
+  ?target_type abstract:has_description ?target .
+  ?instance event:of_target ?target_type .
+  ?instance event:of_target physical:Chlor_a_Instance .
+  ?instance event:has_context ?context .
+  ?instance event:has_measurement ?measurement .
+  ?instance rdf:type ?observation .
+  ?observation rdfs:subClassOf event:Observation .
+}
+	</query_string>
+</query>
+</queries>
